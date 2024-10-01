@@ -65,6 +65,7 @@ pos_lcd_initial_line3=$D4
 mas_screen_top = $d3 ;zero page address with the number of continuos ascii screens to print
 mas_screen_current = $d4 ;zero page address with the number the current ascii screens to print
 mas_record_lenght=$d5 ;zero page address with the size of the ascii record
+mas_screen_total_lenght=$d6 ; all the record on one screen
 
 ;define LCD signals
 E = %10000000 ;Enable Signal
@@ -92,73 +93,15 @@ RESET:
 
 start_demo:  
   ;jsr demo_first_part
-  jsr demo_ms_first_part;
+  jsr demo_ms_p1;
   jsr pacman_start;
   jsr pacman_playing;
+  jsr demo_ms_p2;
   jsr sprint_start ;print title an do a lap
   jsr sprint_playing ;each one is a new lap
   jsr sprint_playing ;each one is a new lap
   jsr demo_final_part
   jmp start_demo
-
-demo_first_part:
-  ;Draw Screen 1 Demo
-  lda #<screen1_demo
-  sta charDataVectorLow
-  lda #>screen1_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  ;Draw Screen 2 Demo
-  lda #<screen2_demo
-  sta charDataVectorLow
-  lda #>screen2_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  ;Draw Screen 3 Demo
-  lda #<screen3_demo
-  sta charDataVectorLow
-  lda #>screen3_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  ;Draw Screen 4 Demo
-  lda #<screen4_demo
-  sta charDataVectorLow
-  lda #>screen4_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  ;Draw Screen 5 Demo
-  lda #<screen5_demo
-  sta charDataVectorLow
-  lda #>screen5_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  ;Draw Screen 6 Demo
-  lda #<screen6_demo
-  sta charDataVectorLow
-  lda #>screen6_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  ;Draw Screen 7 Demo
-  lda #<screen7_demo
-  sta charDataVectorLow
-  lda #>screen7_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  ;Draw Screen 8 Demo
-  lda #<screen8_demo
-  sta charDataVectorLow
-  lda #>screen8_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  rts
 
 pacman_start:
   jsr add_custom_chars_pacman
@@ -443,24 +386,41 @@ enter_into_loop:
   jmp loop
 
 
-demo_ms_first_part:
+demo_ms_p1:
   lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
   sta mas_record_lenght  
   lda #$10 ;set to 16 screens for part 1 of the demo
   sta mas_screen_top
   ;load the first screen
-  lda #<screen1_demo
+  lda #<screen1_demo_p1
   sta charDataVectorLow
-  lda #>screen1_demo
+  lda #>screen1_demo_p1
   sta charDataVectorHigh
   jsr multi_ascii_screen_print
   rts
 
+demo_ms_p2:
+  lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
+  sta mas_record_lenght  
+  lda #$04 ;set to 4 screens for part 2 of the demo
+  sta mas_screen_top
+  ;load the first screen
+  lda #<screen1_demo_p2
+  sta charDataVectorLow
+  lda #>screen1_demo_p2
+  sta charDataVectorHigh
+  jsr multi_ascii_screen_print
+  rts
+
+
+
 multi_ascii_screen_print:
   lda #$00 ; so I start at screen 1
   sta mas_screen_current
-  lda #15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
+  lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
   sta mas_record_lenght
+  lda #$2c ;44
+  sta mas_screen_total_lenght ; this is record lenght times 4, 44 characters including terminator
 
 multi_ascii_screen_multiple:
   inc mas_screen_current ;star at screen 1
@@ -473,7 +433,7 @@ add_record_lenght:
   bne done_add
   inc charDataVectorHigh
 done_add:
-  cpx mas_record_lenght
+  cpx mas_screen_total_lenght
   bne add_record_lenght
 compare_screen_status:
   lda mas_screen_top
@@ -960,103 +920,130 @@ char_load_loop:
  .org $d000
 startDATA: 
 
-screen1_demo:
+screen1_demo_p1:
   .asciiz "      Hoooola       "
   .asciiz "                    "
   .asciiz "    Flash Party     "
   .asciiz "       20 24        "
 
-screen2_demo:
+screen2_demo_p1:
   .asciiz "Hola                "
   .asciiz "                    "
   .asciiz "                    "
   .asciiz "                    "
 
-screen3_demo:
+screen3_demo_p1:
   .asciiz "                    "
   .asciiz "     Soy la 20c     "
   .asciiz "                    "
   .asciiz "                    "
 
-screen4_demo:
+screen4_demo_p1:
   .asciiz "    Soy una compu   "
   .asciiz "       MO           "
   .asciiz "         DU         "
   .asciiz "           LAR      "
 
-screen5_demo:
+screen5_demo_p1:
   .asciiz "    Y tengo solo    "
   .asciiz "                    "
   .asciiz "       8 BITS       "
   .asciiz "                    "
 
-screen6_demo:
+screen6_demo_p1:
   .asciiz "Me hicieron         "
   .asciiz "para explicar       "
   .asciiz "Como funcionan      "
   .asciiz "las COMPUTADORAS    "
 
-screen7_demo:
+screen7_demo_p1:
   .asciiz "  Soy  OpenSource   "
   .asciiz "                    "
   .asciiz "    Hard y Soft     "
   .asciiz "                    "
 
-screen8_demo:
+screen8_demo_p1:
   .asciiz "  Mi cuerpo son     "
   .asciiz "                    "
   .asciiz "  Plaquitas PCB     "
   .asciiz "                    "
 
-screen9_demo:
+screen9_demo_p1:
   .asciiz "  Mi cuerpo son     "
   .asciiz "                    "
   .asciiz "  Plaquitas PCB     "
   .asciiz "                    "
 
-screen10_demo:
+screen10_demo_p1:
   .asciiz "  Hay modulos de    "
   .asciiz "                    "
   .asciiz "   CPU   CLOCK      "
   .asciiz "       RAM     ROM  "
 
-screen11_demo:
+screen11_demo_p1:
   .asciiz "                    "
   .asciiz "     Que onda       "
   .asciiz "                    "
   .asciiz "                    "
   
-screen12_demo:
+screen12_demo_p1:
   .asciiz "    Primera vez     "
   .asciiz "                    "
   .asciiz " Que hago  una DEMO "
   .asciiz "                    "
 
-screen13_demo:
+screen13_demo_p1:
   .asciiz "                    "
   .asciiz "     . . . . .      "
   .asciiz "                    "
   .asciiz "                    "
 
-screen14_demo:
+screen14_demo_p1:
   .asciiz "                    "
   .asciiz "     Silencio       "
   .asciiz "     Incomodo       "
   .asciiz "                    "
 
-screen15_demo:
+screen15_demo_p1:
   .asciiz "   Me gusta jugar   "
   .asciiz "     Jueguitos      "
   .asciiz "                    "
   .asciiz "TODOS DE LOS OCHENTA""
 
-screen16_demo:
+screen16_demo_p1:
   .asciiz "     Tengo el       "
   .asciiz "                    "
-  .asciiz "   SPACE INVADERS   "
+  .asciiz "      PAC MAN       "
   .asciiz "                    "
 
-;End first demo here an run Space Invaders
+;End first demo here an run PAC MAN
+
+screen1_demo_p2:
+  .asciiz "El de               "
+  .asciiz "                    "
+  .asciiz "  Juegos de Guerra  "
+  .asciiz "                    "
+
+screen2_demo_p2:
+  .asciiz "GREETINGS           "
+  .asciiz "PROFESSOR FALKEN.   "
+  .asciiz "SHALL WE PLAY       "
+  .asciiz "A GAME?             "
+
+screen3_demo_p2:
+  .asciiz "No se mataron       "
+  .asciiz "programando mucho   "
+  .asciiz "el de               "
+  .asciiz "juegos de guerra    "
+
+screen4_demo_p2:
+  .asciiz "Aaa pero el         "
+  .asciiz "                    "
+  .asciiz "   de carreras....  "
+  .asciiz "                    "
+
+;End second demo here an run SPRINT
+
 
 screenX2_demo:
   .asciiz "      Jugamos       "
