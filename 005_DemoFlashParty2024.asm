@@ -162,7 +162,7 @@ pacman_start_ms:
   jsr clear_display
   lda #<title_pacman
   sta charDataVectorLow
-  lda #>title_invaders_1
+  lda #>title_pacman
   sta charDataVectorHigh
   jsr print_message
   jsr DELAY_HALF_SEC
@@ -1125,22 +1125,22 @@ screen7_demo_p1:
   .asciiz "                    "
 
 screen8_demo_p1:
-  .asciiz "  Mi cuerpo son     "
+  .asciiz "   Mi cuerpo son    "
   .asciiz "                    "
-  .asciiz "  Plaquitas PCB     "
+  .asciiz "   Plaquitas PCB    "
   .asciiz "                    "
 
 screen9_demo_p1:
-  .asciiz "  Mi cuerpo son     "
-  .asciiz "                    "
-  .asciiz "  Plaquitas PCB     "
-  .asciiz "                    "
-
-screen10_demo_p1:
   .asciiz "  Hay modulos de    "
   .asciiz "                    "
   .asciiz "   CPU   CLOCK      "
-  .asciiz "       RAM     ROM  "
+  .asciiz "      RAM     ROM  "
+
+screen10_demo_p1:
+  .asciiz "    Mi Cerebro      "
+  .asciiz "      es un         "
+  .asciiz "     CPU 6502       "
+  .asciiz "                    "
 
 screen11_demo_p1:
   .asciiz "                    "
@@ -1182,9 +1182,9 @@ screen16_demo_p1:
 
 screen1_demo_p2:
   .asciiz "El de               "
-  .asciiz "                    "
-  .asciiz "  Juegos de Guerra  "
-  .asciiz "                    "
+  .asciiz "      Juegos        "
+  .asciiz "        de          "
+  .asciiz "      Guerra        "
 
 screen2_demo_p2:
   .asciiz "GREETINGS           "
@@ -1243,31 +1243,31 @@ screen3_final_demo:
 screen4_final_demo:
   .asciiz "OsoLabs             "
   .asciiz "                    "
-  .asciiz "Armó el Hard y      "
-  .asciiz "El Assembler        "
+  .asciiz "Armo el             "
+  .asciiz "      Hardware      "
 
 screen5_final_demo:
   .asciiz "Para saber como     "
-  .asciiz "Hacer el HARD       "
-  .asciiz "y Programarme       "
+  .asciiz "                    "
+  .asciiz "Hacerte una 20c     "
   .asciiz "                    "
 
 screen6_final_demo:
-  .asciiz "Vayan a             "
+  .asciiz "vayan a             "
   .asciiz "                    "
-  .asciiz "OSOLABS.TECH/THE20C "
+  .asciiz "    OSOLABS.TECH    "
   .asciiz "                    "
   
 screen7_final_demo:
-  .asciiz "Gracias!            "
-  .asciiz "Como dice el        "
-  .asciiz "Mayor Quimby ...    "
+  .asciiz "     Gracias!       "
+  .asciiz "   Como dice el     "
+  .asciiz "   Alcalde Quimb    "
   .asciiz "                    "
 
 screen8_final_demo:
-  .asciiz "                    "
-  .asciiz "VOTEN POR MI!!!!!!  "
-  .asciiz "                    "
+  .asciiz "      VOTEN         "
+  .asciiz "       POR          "
+  .asciiz "!!!!    MI      !!!!"
   .asciiz "                    "
   
 ;-------------------------------------
