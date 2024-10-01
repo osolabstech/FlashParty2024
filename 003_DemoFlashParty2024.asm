@@ -469,9 +469,9 @@ multi_ascii_screen_multiple:
   ldx #$00
 add_record_lenght:  
   inx
-  inc charLoadLow
+  inc charDataVectorLow
   bne done_add
-  inc charLoadHigh
+  inc charDataVectorHigh
 done_add:
   cpx mas_record_lenght
   bne add_record_lenght
