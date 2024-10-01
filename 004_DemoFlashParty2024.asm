@@ -513,7 +513,7 @@ multi_screen_print:
 
 multi_screen_multiple:
   inc mas_screen_current ;star at screen 1
-  jsr print_ascii_screen ; print screen mas_screen_current
+  jsr print_screen ; print NON ASCII screen mas_screen_current
   jsr DELAY_HALF_SEC ;add delay to wait with the screen printed
   ldx #$00
 add_record_lenght_ms:  
@@ -539,6 +539,8 @@ multi_ascii_screen_print:
   sta mas_screen_total_lenght ; this is record lenght times 4, 44 characters including terminator
 
 multi_ascii_screen_multiple:
+  lda #$80 ;set the cursor on the top left corner
+  jsr lcd_send_instruction
   inc mas_screen_current ;star at screen 1
   jsr print_ascii_screen ; print screen mas_screen_current
   jsr delay_3_sec ;add delay to wait with the screen printed
