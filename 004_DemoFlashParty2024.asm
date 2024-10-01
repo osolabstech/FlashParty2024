@@ -155,7 +155,7 @@ invaders_playing_ms:
   sta mas_record_lenght  
   lda #$0A ; make the record lenght of 10 elements (one for position, 9 for graphics)
   sta record_lenght ;used inside print_screen
-  lda #$06 ;set to 6 screens for space invaders
+  lda #$0d ;set to 13 screens for space invaders
   sta mas_screen_top
   lda #$29 ;41 decimal
   sta mas_screen_total_lenght ; this is record lenght times 4, 40 characters plus one terminator
