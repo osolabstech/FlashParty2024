@@ -535,12 +535,10 @@ multi_ascii_screen_print:
   sta mas_screen_current
   lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
   sta mas_record_lenght
-  lda #$2c ;44
-  sta mas_screen_total_lenght ; this is record lenght times 4, 44 characters including terminator
+  lda #$54 ;84
+  sta mas_screen_total_lenght ; this is record lenght times 4, 84 characters including terminator
 
 multi_ascii_screen_multiple:
-  lda #$80 ;set the cursor on the top left corner
-  jsr lcd_send_instruction
   inc mas_screen_current ;star at screen 1
   jsr clear_display
   jsr print_ascii_screen ; print screen mas_screen_current
