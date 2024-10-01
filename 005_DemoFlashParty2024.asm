@@ -1005,12 +1005,12 @@ screen9_demo_p1:
   .asciiz "  Hay modulos de    "
   .asciiz "                    "
   .asciiz "   CPU   CLOCK      "
-  .asciiz "      RAM     ROM  "
+  .asciiz "      RAM     ROM   "
 
 screen10_demo_p1:
-  .asciiz "     Mi Cerebro    "
-  .asciiz "        es un      "
-  .asciiz "      CPU 6502      "
+  .asciiz "      Mi Cerebro    "
+  .asciiz "        es un       "
+  .asciiz "       CPU 6502     "
   .asciiz "                    "
 
 screen11_demo_p1:
