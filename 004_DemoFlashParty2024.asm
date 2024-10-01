@@ -40,8 +40,8 @@ cesquina_ld=$07
 cpunto=$a5
 cpill=$a1
 
-cship=$01
-cinv1=$02
+cship=$00
+cinv1=$01
 cinv2=$fc
 cshot1=%00101110
 cshot2=%10100101
