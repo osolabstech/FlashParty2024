@@ -701,7 +701,7 @@ DELAY_SEC:
   jmp DELAY_MAIN
 
 DELAY_HALF_SEC:
-  lda #$70
+  lda #$50
   sta delay_COUNT_A
   lda #$FF
   sta delay_COUNT_B
@@ -1027,7 +1027,7 @@ screen12_demo_p1:
 
 screen13_demo_p1:
   .asciiz "                    "
-  .asciiz "     . . . . .      "
+  .asciiz "      . . . . .     "
   .asciiz "                    "
   .asciiz "                    "
 
@@ -1044,7 +1044,7 @@ screen15_demo_p1:
   .asciiz "TODOS DE LOS OCHENTA"
 
 screen16_demo_p1:
-  .asciiz "      Tengo el      "
+  .asciiz "     Tengo  el      "
   .asciiz "                    "
   .asciiz "      PAC MAN       "
   .asciiz "                    "
@@ -1052,7 +1052,7 @@ screen16_demo_p1:
 ;End first demo here an run PAC MAN
 
 screen1_demo_p2:
-  .asciiz "      el de         "
+  .asciiz "      el  de        "
   .asciiz "      Juegos        "
   .asciiz "        de          "
   .asciiz "      Guerra        "
@@ -1064,9 +1064,9 @@ screen2_demo_p2:
   .asciiz "A GAME?             "
 
 screen3_demo_p2:
-  .asciiz "   No se mataron    "
+  .asciiz "    No se mataron   "
   .asciiz "  programando mucho "
-  .asciiz "      el de         "
+  .asciiz "       el de        "
   .asciiz "  juegos de guerra  "
 
 screen4_demo_p2:
@@ -1132,7 +1132,7 @@ screen6_final_demo:
 screen7_final_demo:
   .asciiz "      Gracias!      "
   .asciiz "    Como dice el    "
-  .asciiz "    Alcalde Quimby  "
+  .asciiz "   Alcalde Quimby   "
   .asciiz "                    "
 
 screen8_final_demo:
@@ -1346,12 +1346,6 @@ invaders_screen_13:
 
 title_sprint:
   .asciiz "SPRINT" ;adds a 0 after the last byte
-
-; sprint_screen_demo:
-;   .byte pos_line1,cpared_l,craya1,cauto1,craya1,craya1,craya1,craya1,craya1,cpared_r
-;   .byte pos_line2,cpared_l,cespacio,craya2,cauto2,craya2,craya2,cespacio,cpared_r
-;   .byte pos_line3,cpared_l,cespacio,craya1,craya1,cauto1,craya1,cauto_vert,cpared_r
-;   .byte pos_line4,cpared_l,craya2,craya2,craya2,cauto2,craya2,craya2,cpared_r,end_char
 
 sprint_screen_1:
   .byte pos_line1,cpared_l,craya1,craya1,craya1,craya1,craya1,craya1,craya1,cpared_r
