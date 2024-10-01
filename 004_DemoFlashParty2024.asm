@@ -151,7 +151,7 @@ invaders_playing:
   jsr DELAY_HALF_SEC
 
 invaders_playing_ms:
-  lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
+  lda #$0A ; make the record lenght of 10 elements (one for position, 9 for graphics)
   sta mas_record_lenght  
   lda #$08 ;set to 8 screens for final part  of the demo
   sta mas_screen_top
