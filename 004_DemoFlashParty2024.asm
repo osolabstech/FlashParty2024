@@ -106,33 +106,30 @@ RESET:
   jsr initilize_display
 
 start_demo:  
-  ;jsr demo_first_part
-  jsr demo_ms_p1;
-  jsr pacman_start;
-  jsr pacman_playing;
-  jsr demo_ms_p2;
-  jsr sprint_start ;print title an do a lap
-  jsr sprint_playing ;each one is a new lap
-  jsr sprint_playing ;each one is a new lap
-  jsr demo_ms_p3
+  ;jsr demo_ms_p1;
+  ;jsr pacman_start;
+  ;jsr pacman_playing;
+  ;jsr demo_ms_p2;
+  ;jsr sprint_start ;print title an do a lap
+  ;jsr sprint_playing ;each one is a new lap
+  ;jsr demo_ms_p3
   jsr invaders_start
   ;jsr invaders_playing
   jsr invaders_playing_ms
-  ;jsr demo_final_part
-  jsr demo_ms_final
+  ;jsr demo_ms_final
   jmp start_demo
 
 invaders_start:
   jsr add_custom_chars_invaders
   jsr initilize_display
-  ;Draw title Pacman
+  ;Draw title Space Invaders
   jsr clear_display
   lda #<title_invaders_1
   sta charDataVectorLow
   lda #>title_invaders_1
   sta charDataVectorHigh
   jsr print_message
-  lda #$c0 ;position cursor at the start of second line
+  lda #$C0 ;position cursor at the start of second line
   jsr lcd_send_instruction
   lda #<title_invaders_2
   sta charDataVectorLow
@@ -1155,7 +1152,7 @@ screen15_demo_p1:
   .asciiz "   Me gusta jugar   "
   .asciiz "     Jueguitos      "
   .asciiz "                    "
-  .asciiz "TODOS DE LOS OCHENTA""
+  .asciiz "TODOS DE LOS OCHENTA"
 
 screen16_demo_p1:
   .asciiz "     Tengo el       "
@@ -1201,7 +1198,7 @@ screen1_demo_p3:
 screen2_demo_p3:
   .asciiz " Bueno vamos con el "
   .asciiz "                    "
-  .asciiz "     FROGGER        "
+  .asciiz "   SPACE INVADERS   "
   .asciiz "                    "
 
 ;End third demo here an run FROGGER
