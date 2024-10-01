@@ -92,6 +92,7 @@ RESET:
 
 start_demo:  
   ;jsr demo_first_part
+  jsr demo_ms_first_part;
   jsr pacman_start;
   jsr pacman_playing;
   jsr sprint_start ;print title an do a lap
@@ -441,15 +442,44 @@ demo_final_part:
 enter_into_loop:
   jmp loop
 
+
+demo_ms_first_part:
+  lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
+  sta mas_record_lenght  
+  lda #$10 ;set to 16 screens for part 1 of the demo
+  sta mas_screen_top
+  ;load the first screen
+  lda #<screen1_demo
+  sta charDataVectorLow
+  lda #>screen1_demo
+  sta charDataVectorHigh
+  jsr multi_ascii_screen_print
+  rts
+
 multi_ascii_screen_print:
-  lda #$00
+  lda #$00 ; so I start at screen 1
   sta mas_screen_current
   lda #15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
   sta mas_record_lenght
-; sta mas_screen_current_low
-; sta mas_screen_current_high
 
 multi_ascii_screen_multiple:
+  inc mas_screen_current ;star at screen 1
+  jsr print_ascii_screen ; print screen mas_screen_current
+  jsr delay_3_sec ;add delay to wait with the screen printed
+  ldx #$00
+add_record_lenght:  
+  inx
+  inc charLoadLow
+  bne done_add
+  inc charLoadHigh
+done_add:
+  cpx mas_record_lenght
+  bne add_record_lenght
+compare_screen_status:
+  lda mas_screen_top
+  cmp mas_screen_current
+  bne multi_ascii_screen_multiple
+  rts
 
 set_position_lcd_line0:
   lda #pos_lcd_initial_line0
@@ -1028,78 +1058,7 @@ screen16_demo:
 
 ;End first demo here an run Space Invaders
 
-  screenXX_demo:
-  .asciiz "                    "
-  .asciiz "                    "
-  .asciiz "                    "
-  .asciiz "                    "
-
-  screenXX_demo:
-  .asciiz "                    "
-  .asciiz "                    "
-  .asciiz "                    "
-  .asciiz "                    "
-
-  —-------------------
-Me gusta jugar 
-jueguitos
-
-TODOS DE LOS OCHENTA
-—-------------------
-Tengo el 
-
-   SPACE INVADERS
-
-—-------------------
-CORRER SPACE INVADERS
-—-------------------
-El de 
-
-   juegos de guerra
-
-—-------------------
-GREETINGS 
-PROFESSOR FALKEN.
-SHALL WE PLAY 
-A GAME?
-—-------------------
-No se mataron 
-programando mucho 
-el de 
-juegos de guerra
-—-------------------
-Aaa pero el . . .
-
-      PACMAN
-
-—-------------------
-CORRER PACMAN
-—-------------------
-Y tambien el 
-
-       SPRINT
-—-------------------
-CORRER SPRINT
-—-------------------
-
-     Uno mas??
-
-
-—-------------------
-Bueno vamos con el 
-
-     FROGGER
-
-—-------------------
-CORRER FROGGER
-—-------------------
-Y buenoooo
-
-Esto es todo por hoy
-
-  
-
-screen8_demo:
+screenX2_demo:
   .asciiz "      Jugamos       "
   .asciiz "     un Juego       "
   .asciiz "    de Carreras?    "
