@@ -106,17 +106,18 @@ RESET:
   jsr initilize_display
 
 start_demo:  
-;   jsr demo_ms_p1;
-;   jsr pacman_start_ms;
-;   jsr pacman_playing_ms;
-;   jsr demo_ms_p2;
-  jsr sprint_start_ms ;print title an do a lap
+  jsr demo_ms_p1;
+  jsr pacman_start_ms;
+  jsr pacman_playing_ms;
+  jsr demo_ms_p2;
+  jsr sprint_start_ms ;print title 
   jsr sprint_playing_ms ;each one is a new lap
-;   jsr demo_ms_p3
-;   jsr invaders_start_ms
-;   jsr invaders_playing_ms
-;   jsr demo_ms_final
-;   jmp start_demo
+  jsr sprint_playing_ms ;each one is a new lap
+  jsr demo_ms_p3
+  jsr invaders_start_ms
+  jsr invaders_playing_ms
+  jsr demo_ms_final
+  jmp start_demo
 
 invaders_start_ms:
   jsr add_custom_chars_invaders
@@ -215,167 +216,7 @@ sprint_playing_ms:
   jsr multi_screen_print
   rts  
 
-; pacman_start:
-;   jsr add_custom_chars_pacman
-;   jsr initilize_display
-;   ;Draw title Pacman
-;   jsr clear_display
-;   lda #<title_pacman
-;   sta charDataVectorLow
-;   lda #>title_pacman
-;   sta charDataVectorHigh
-;   jsr print_message
-;   jsr DELAY_HALF_SEC
-;   rts
-; pacman_playing:
-;   ;Draw Screen1
-;   lda #$0A
-;   sta record_lenght ; make the record lenght of 10 elements (one for position, 9 for graphics)
-;   lda #<pacman_screen_1
-;   sta charDataVectorLow
-;   lda #>pacman_screen_1
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;   ;Draw Screen2
-;   lda #<pacman_screen_2
-;   sta charDataVectorLow
-;   lda #>pacman_screen_2
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;   ;Draw Screen3
-;   lda #<pacman_screen_3
-;   sta charDataVectorLow
-;   lda #>pacman_screen_3
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;   ;Draw Screen4
-;   lda #<pacman_screen_4
-;   sta charDataVectorLow
-;   lda #>pacman_screen_4
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;   ;Draw Screen5
-;   lda #<pacman_screen_5
-;   sta charDataVectorLow
-;   lda #>pacman_screen_5
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen6
-;   lda #<pacman_screen_6
-;   sta charDataVectorLow
-;   lda #>pacman_screen_6
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen7
-;   lda #<pacman_screen_7
-;   sta charDataVectorLow
-;   lda #>pacman_screen_7
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen8
-;   lda #<pacman_screen_8
-;   sta charDataVectorLow
-;   lda #>pacman_screen_8
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen9
-;   lda #<pacman_screen_9
-;   sta charDataVectorLow
-;   lda #>pacman_screen_9
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen10
-;   lda #<pacman_screen_10
-;   sta charDataVectorLow
-;   lda #>pacman_screen_10
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen11
-;   lda #<pacman_screen_11
-;   sta charDataVectorLow
-;   lda #>pacman_screen_11
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen12
-;   lda #<pacman_screen_12
-;   sta charDataVectorLow
-;   lda #>pacman_screen_12
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen13
-;   lda #<pacman_screen_13
-;   sta charDataVectorLow
-;   lda #>pacman_screen_13
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen14
-;   lda #<pacman_screen_14
-;   sta charDataVectorLow
-;   lda #>pacman_screen_14
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen15
-;   lda #<pacman_screen_15
-;   sta charDataVectorLow
-;   lda #>pacman_screen_15
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen16
-;   lda #<pacman_screen_16
-;   sta charDataVectorLow
-;   lda #>pacman_screen_16
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen17
-;   lda #<pacman_screen_17
-;   sta charDataVectorLow
-;   lda #>pacman_screen_17
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-;  ;Draw Screen18
-;   lda #<pacman_screen_18
-;   sta charDataVectorLow
-;   lda #>pacman_screen_18
-;   sta charDataVectorHigh
-;   jsr print_screen
-;   jsr DELAY_HALF_SEC
-; pacman_end:  
-;   jsr delay_5_sec
-;   rts
 
-; sprint_start:
-;   jsr add_custom_chars_sprint
-;   jsr initilize_display
-;   lda #$09
-;   sta record_lenght ; make the record lenght of 9 elements (one for position, 8 for graphics)
-;   ;Draw title Sprint
-;   jsr clear_display
-;   lda #<title_sprint
-;   sta charDataVectorLow
-;   lda #>title_sprint
-;   sta charDataVectorHigh
-;   jsr print_message
-;   jsr DELAY_SEC
-;   jsr DELAY_SEC
-
-; sprint_playing:
   ;Draw Screen1
   lda #<sprint_screen_1
   sta charDataVectorLow
@@ -1192,8 +1033,8 @@ screen13_demo_p1:
 
 screen14_demo_p1:
   .asciiz "                    "
-  .asciiz "     Silencio       "
-  .asciiz "     Incomodo       "
+  .asciiz "      Silencio      "
+  .asciiz "      Incomodo      "
   .asciiz "                    "
 
 screen15_demo_p1:
@@ -1203,7 +1044,7 @@ screen15_demo_p1:
   .asciiz "TODOS DE LOS OCHENTA"
 
 screen16_demo_p1:
-  .asciiz "     Tengo el       "
+  .asciiz "      Tengo el      "
   .asciiz "                    "
   .asciiz "      PAC MAN       "
   .asciiz "                    "
@@ -1211,7 +1052,7 @@ screen16_demo_p1:
 ;End first demo here an run PAC MAN
 
 screen1_demo_p2:
-  .asciiz "El de               "
+  .asciiz "      el de         "
   .asciiz "      Juegos        "
   .asciiz "        de          "
   .asciiz "      Guerra        "
@@ -1223,10 +1064,10 @@ screen2_demo_p2:
   .asciiz "A GAME?             "
 
 screen3_demo_p2:
-  .asciiz "No se mataron       "
-  .asciiz "programando mucho   "
-  .asciiz "el de               "
-  .asciiz "juegos de guerra    "
+  .asciiz "   No se mataron    "
+  .asciiz "  programando mucho "
+  .asciiz "      el de         "
+  .asciiz "  juegos de guerra  "
 
 screen4_demo_p2:
   .asciiz "Aaa pero el         "
@@ -1253,7 +1094,7 @@ screen2_demo_p3:
 
 
 screen1_final_demo:
-  .asciiz "   Y buenoooo       "
+  .asciiz "     Y buenoooo     "
   .asciiz "                    "
   .asciiz "Esto es todo por hoy"
   .asciiz "                    "
@@ -1271,33 +1112,33 @@ screen3_final_demo:
   .asciiz "                    "
 
 screen4_final_demo:
-  .asciiz "OsoLabs             "
+  .asciiz "      OsoLabs       "
   .asciiz "                    "
   .asciiz "Armo el             "
   .asciiz "      Hardware      "
 
 screen5_final_demo:
-  .asciiz "Para saber como     "
+  .asciiz "  Para saber como   "
   .asciiz "                    "
-  .asciiz "Hacerte una 20c     "
+  .asciiz "  Hacerte una 20c   "
   .asciiz "                    "
 
 screen6_final_demo:
-  .asciiz "vayan a             "
+  .asciiz "anda a              "
   .asciiz "                    "
   .asciiz "    OSOLABS.TECH    "
   .asciiz "                    "
   
 screen7_final_demo:
-  .asciiz "     Gracias!       "
-  .asciiz "   Como dice el     "
-  .asciiz "   Alcalde Quimb    "
+  .asciiz "      Gracias!      "
+  .asciiz "    Como dice el    "
+  .asciiz "    Alcalde Quimby  "
   .asciiz "                    "
 
 screen8_final_demo:
-  .asciiz "      VOTEN         "
-  .asciiz "       POR          "
-  .asciiz "!!!!    MI      !!!!"
+  .asciiz "        VOTEN       "
+  .asciiz "         POR        "
+  .asciiz "!!!!     MI     !!!!"
   .asciiz "                    "
   
 ;-------------------------------------
