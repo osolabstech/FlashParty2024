@@ -62,6 +62,10 @@ pos_lcd_initial_line1=$C0
 pos_lcd_initial_line2=$94
 pos_lcd_initial_line3=$D4
 
+mas_screen_top = $d3 ;zero page address with the number of continuos ascii screens to print
+mas_screen_current = $d4 ;zero page address with the number the current ascii screens to print
+mas_record_lenght=$d5 ;zero page address with the size of the ascii record
+
 ;define LCD signals
 E = %10000000 ;Enable Signal
 RW = %01000000 ; Read/Write Signal
@@ -436,6 +440,16 @@ demo_final_part:
 
 enter_into_loop:
   jmp loop
+
+multi_ascii_screen_print:
+  lda #$00
+  sta mas_screen_current
+  lda #15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
+  sta mas_record_lenght
+; sta mas_screen_current_low
+; sta mas_screen_current_high
+
+multi_ascii_screen_multiple:
 
 set_position_lcd_line0:
   lda #pos_lcd_initial_line0
