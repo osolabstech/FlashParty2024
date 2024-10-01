@@ -1008,14 +1008,14 @@ screen9_demo_p1:
   .asciiz "      RAM     ROM   "
 
 screen10_demo_p1:
-  .asciiz "      Mi Cerebro    "
-  .asciiz "        es un       "
-  .asciiz "       CPU 6502     "
+  .asciiz "     Mi Cerebro     "
+  .asciiz "       es un        "
+  .asciiz "      CPU 6502      "
   .asciiz "                    "
 
 screen11_demo_p1:
   .asciiz "                    "
-  .asciiz "     Que onda       "
+  .asciiz "      Que onda      "
   .asciiz "                    "
   .asciiz "                    "
   
