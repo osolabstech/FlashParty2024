@@ -100,7 +100,9 @@ start_demo:
   jsr sprint_start ;print title an do a lap
   jsr sprint_playing ;each one is a new lap
   jsr sprint_playing ;each one is a new lap
-  jsr demo_final_part
+  jsr demo_ms_p3
+  ;jsr demo_final_part
+  jsr demo_ms_final
   jmp start_demo
 
 pacman_start:
@@ -412,7 +414,31 @@ demo_ms_p2:
   jsr multi_ascii_screen_print
   rts
 
+demo_ms_p3:
+  lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
+  sta mas_record_lenght  
+  lda #$02 ;set to 2 screens for part 3 of the demo
+  sta mas_screen_top
+  ;load the first screen
+  lda #<screen1_demo_p3
+  sta charDataVectorLow
+  lda #>screen1_demo_p3
+  sta charDataVectorHigh
+  jsr multi_ascii_screen_print
+  rts
 
+demo_ms_final:
+  lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
+  sta mas_record_lenght  
+  lda #$08 ;set to 8 screens for final part  of the demo
+  sta mas_screen_top
+  ;load the first screen
+  lda #<screen1_final_demo
+  sta charDataVectorLow
+  lda #>screen1_final_demo
+  sta charDataVectorHigh
+  jsr multi_ascii_screen_print
+  rts
 
 multi_ascii_screen_print:
   lda #$00 ; so I start at screen 1
@@ -1045,25 +1071,69 @@ screen4_demo_p2:
 ;End second demo here an run SPRINT
 
 
-screenX2_demo:
-  .asciiz "      Jugamos       "
-  .asciiz "     un Juego       "
-  .asciiz "    de Carreras?    "
+screen1_demo_p3:
+  .asciiz "                    "
+  .asciiz "     Uno mas??      "
+  .asciiz "                    "
   .asciiz "                    "
 
+screen2_demo_p3:
+  .asciiz " Bueno vamos con el "
+  .asciiz "                    "
+  .asciiz "     FROGGER        "
+  .asciiz "                    "
+
+;End third demo here an run FROGGER
+
+
 screen1_final_demo:
-  .asciiz "     Queres         "
-  .asciiz "     Saber          "
-  .asciiz "     Mas?           "
+  .asciiz "   Y buenoooo       "
+  .asciiz "                    "
+  .asciiz "Esto es todo por hoy"
   .asciiz "                    "
 
 screen2_final_demo:
-  .asciiz "     Vayan a        "
+  .asciiz "Esta Demo fue traida"
+  .asciiz "                    "
+  .asciiz "A ustedes por . . . "
+  .asciiz "                    "
+
+screen3_final_demo:
+  .asciiz "Alecu               "
+  .asciiz "    Carlinho        "
+  .asciiz "           ElVelazco"
+  .asciiz "                    "
+
+screen4_final_demo:
+  .asciiz "OsoLabs             "
+  .asciiz "                    "
+  .asciiz "Armó el Hard y      "
+  .asciiz "El Assembler        "
+
+screen5_final_demo:
+  .asciiz "Para saber como     "
+  .asciiz "Hacer el HARD       "
+  .asciiz "y Programarme       "
+  .asciiz "                    "
+
+screen6_final_demo:
+  .asciiz "Vayan a             "
   .asciiz "                    "
   .asciiz "OSOLABS.TECH/THE20C "
   .asciiz "                    "
+  
+screen7_final_demo:
+  .asciiz "Gracias!            "
+  .asciiz "Como dice el        "
+  .asciiz "Mayor Quimby ...    "
+  .asciiz "                    "
 
-
+screen8_final_demo:
+  .asciiz "                    "
+  .asciiz "VOTEN POR MI!!!!!!  "
+  .asciiz "                    "
+  .asciiz "                    "
+  
 ;-------------------------------------
 screenXX_demo:
   .asciiz "                    "
