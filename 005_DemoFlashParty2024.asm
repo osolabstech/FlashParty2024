@@ -986,7 +986,7 @@ screen5_demo_p1:
 screen6_demo_p1:
   .asciiz "Me hicieron         "
   .asciiz "para explicar       "
-  .asciiz "Como funcionan      "
+  .asciiz "como funcionan      "
   .asciiz "las COMPUTADORAS    "
 
 screen7_demo_p1:
@@ -1008,9 +1008,9 @@ screen9_demo_p1:
   .asciiz "      RAM     ROM  "
 
 screen10_demo_p1:
-  .asciiz "    Mi Cerebro      "
-  .asciiz "      es un         "
-  .asciiz "     CPU 6502       "
+  .asciiz "     Mi Cerebro    "
+  .asciiz "        es un      "
+  .asciiz "      CPU 6502      "
   .asciiz "                    "
 
 screen11_demo_p1:
@@ -1020,7 +1020,7 @@ screen11_demo_p1:
   .asciiz "                    "
   
 screen12_demo_p1:
-  .asciiz "    Primera vez     "
+  .asciiz "     Primera vez    "
   .asciiz "                    "
   .asciiz " Que hago  una DEMO "
   .asciiz "                    "
