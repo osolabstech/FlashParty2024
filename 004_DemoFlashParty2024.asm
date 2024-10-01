@@ -153,8 +153,12 @@ invaders_playing:
 invaders_playing_ms:
   lda #$0A ; make the record lenght of 10 elements (one for position, 9 for graphics)
   sta mas_record_lenght  
+  lda #$0A ; make the record lenght of 10 elements (one for position, 9 for graphics)
+  sta record_lenght ;used inside print_screen
   lda #$08 ;set to 8 screens for final part  of the demo
   sta mas_screen_top
+  lda #$29 ;41 decimal
+  sta mas_screen_total_lenght ; this is record lenght times 4, 40 characters plus one terminator
   ;load the first screen
   lda #<invaders_screen_1
   sta charDataVectorLow
@@ -503,10 +507,6 @@ demo_ms_final:
 multi_screen_print:
   lda #$00 ; so I start at screen 1
   sta mas_screen_current
-  lda #$10 ;set the record lenght on 10 characters, 9 letters 
-  sta mas_record_lenght
-  lda #$24 ;36 decimal
-  sta mas_screen_total_lenght ; this is record lenght times 9, 36 characters plus one terminator
 
 multi_screen_multiple:
   inc mas_screen_current ;star at screen 1
