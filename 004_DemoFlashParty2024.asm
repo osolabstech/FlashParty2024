@@ -511,7 +511,7 @@ multi_screen_print:
 multi_screen_multiple:
   inc mas_screen_current ;star at screen 1
   jsr print_screen ; print NON ASCII screen mas_screen_current
-  jsr delay_5_sec ;add delay to wait with the screen printed
+  jsr DELAY_HALF_SEC ;add delay to wait with the screen printed
   ldx #$00
 add_record_lenght_ms:  
   inx
@@ -1413,6 +1413,47 @@ invaders_screen_6:
   .byte pos_line3_invaders,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio
   .byte pos_line4_invaders,cespacio,cespacio,cespacio,cship,cespacio,cespacio,cespacio,cespacio,cespacio,end_char
 
+invaders_screen_7:
+  .byte pos_line1_invaders,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cespacio
+  .byte pos_line2_invaders,cinv2,cinv2,cinv2,cespacio,cinv2,cinv2,cinv2,cinv2,cespacio
+  .byte pos_line3_invaders,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio
+  .byte pos_line4_invaders,cespacio,cespacio,cespacio,cespacio,cship,cespacio,cespacio,cespacio,cespacio,end_char
+
+invaders_screen_8:
+  .byte pos_line1_invaders,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cespacio
+  .byte pos_line2_invaders,cinv2,cinv2,cinv2,cespacio,cinv2,cinv2,cinv2,cinv2,cespacio
+  .byte pos_line3_invaders,cespacio,cespacio,cespacio,cespacio,cshot1,cespacio,cespacio,cespacio,cespacio
+  .byte pos_line4_invaders,cespacio,cespacio,cespacio,cespacio,cship,cespacio,cespacio,cespacio,cespacio,end_char
+
+invaders_screen_9:
+  .byte pos_line1_invaders,cespacio,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1
+  .byte pos_line2_invaders,cespacio,cinv2,cinv2,cinv2,cespacio,cinv2,cinv2,cinv2,cinv2
+  .byte pos_line3_invaders,cespacio,cespacio,cespacio,cespacio,cshot2,cespacio,cespacio,cespacio,cespacio
+  .byte pos_line4_invaders,cespacio,cespacio,cespacio,cespacio,cship,cespacio,cespacio,cespacio,cespacio,end_char
+
+invaders_screen_10:
+  .byte pos_line1_invaders,cespacio,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1
+  .byte pos_line2_invaders,cespacio,cinv2,cinv2,cinv2,cshot1,cinv2,cinv2,cinv2,cinv2
+  .byte pos_line3_invaders,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio
+  .byte pos_line4_invaders,cespacio,cespacio,cespacio,cespacio,cship,cespacio,cespacio,cespacio,cespacio,end_char
+
+invaders_screen_11:
+  .byte pos_line1_invaders,cespacio,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1,cinv1
+  .byte pos_line2_invaders,cespacio,cinv2,cinv2,cinv2,cshot2,cinv2,cinv2,cinv2,cinv2
+  .byte pos_line3_invaders,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio
+  .byte pos_line4_invaders,cespacio,cespacio,cespacio,cespacio,cship,cespacio,cespacio,cespacio,cespacio,end_char
+
+invaders_screen_12:
+  .byte pos_line1_invaders,cespacio,cinv1,cinv1,cinv1,cexpl1,cinv1,cinv1,cinv1,cinv1
+  .byte pos_line2_invaders,cespacio,cinv2,cinv2,cinv2,cespacio,cinv2,cinv2,cinv2,cinv2
+  .byte pos_line3_invaders,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio
+  .byte pos_line4_invaders,cespacio,cespacio,cespacio,cespacio,cship,cespacio,cespacio,cespacio,cespacio,end_char
+
+invaders_screen_13:
+  .byte pos_line1_invaders,cespacio,cinv1,cinv1,cinv1,cexpl2,cinv1,cinv1,cinv1,cinv1
+  .byte pos_line2_invaders,cespacio,cinv2,cinv2,cinv2,cespacio,cinv2,cinv2,cinv2,cinv2
+  .byte pos_line3_invaders,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio,cespacio
+  .byte pos_line4_invaders,cespacio,cespacio,cespacio,cespacio,cship,cespacio,cespacio,cespacio,cespacio,end_char
 
 title_sprint:
   .asciiz "SPRINT" ;adds a 0 after the last byte
