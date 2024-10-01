@@ -542,6 +542,7 @@ multi_ascii_screen_multiple:
   lda #$80 ;set the cursor on the top left corner
   jsr lcd_send_instruction
   inc mas_screen_current ;star at screen 1
+  jsr clear_display
   jsr print_ascii_screen ; print screen mas_screen_current
   jsr delay_3_sec ;add delay to wait with the screen printed
   ldx #$00
