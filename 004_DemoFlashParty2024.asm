@@ -40,8 +40,8 @@ cesquina_ld=$07
 cpunto=$a5
 cpill=$a1
 
-cship=$00
-cinv1=$01
+cship=$01
+cinv1=$02
 cinv2=$fc
 cshot1=%00101110
 cshot2=%10100101
@@ -1543,9 +1543,9 @@ pared_h:
 
 
 invader_ship_1:
-  .byte $01,$01,$01,$01,$01,$01,$01,$01,$00
+  .byte $00,$04,$04,$0e,$1f,$04,$0e,$00
 invader_ship_2:
-  .byte $fc,$fc,$fc,$fc,$fc,$fc,$fc,$fc,$00
+  .byte $00,$04,$0E,$15,$1B,$0E,$00,$00
 
 ;complete the file
   .org $fffc ;go to memory address $fffc of the reset vector
