@@ -155,7 +155,7 @@ invaders_playing_ms:
   sta mas_record_lenght  
   lda #$0A ; make the record lenght of 10 elements (one for position, 9 for graphics)
   sta record_lenght ;used inside print_screen
-  lda #$08 ;set to 8 screens for final part  of the demo
+  lda #$06 ;set to 8 screens for final part  of the demo
   sta mas_screen_top
   lda #$29 ;41 decimal
   sta mas_screen_total_lenght ; this is record lenght times 4, 40 characters plus one terminator
@@ -511,7 +511,7 @@ multi_screen_print:
 multi_screen_multiple:
   inc mas_screen_current ;star at screen 1
   jsr print_screen ; print NON ASCII screen mas_screen_current
-  jsr DELAY_HALF_SEC ;add delay to wait with the screen printed
+  jsr delay_5_sec ;add delay to wait with the screen printed
   ldx #$00
 add_record_lenght_ms:  
   inx
