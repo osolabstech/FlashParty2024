@@ -520,7 +520,7 @@ add_record_lenght_ms:
   inc charDataVectorHigh
 done_add_ms:
   cpx mas_screen_total_lenght
-  bne add_record_lenght
+  bne add_record_lenght_ms
 compare_screen_status_ms:
   lda mas_screen_top
   cmp mas_screen_current
