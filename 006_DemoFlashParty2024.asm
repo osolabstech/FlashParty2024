@@ -415,8 +415,6 @@ print_scroll:
   sta pscroll_l3_high
 
 print_scroll_screen_loop:
-  cpx max_columns_scroll
-  beq print_scroll_end
   jsr print_scroll_l0
   jsr print_scroll_l1
   jsr print_scroll_l2
@@ -431,8 +429,6 @@ print_scroll_l0:
   ldy #$FF
 print_scroll_loop_l0:
   ;print line zero 20 chars
-  inx ;keep only here to count only 20 columns and not one column per line
-      ;as it would be if I keep it on l1, l2 and l3
   iny
   lda (pscroll_l0_low),y
   jsr print_char 
@@ -472,9 +468,13 @@ print_scroll_l3:
   ldy #$FF
 print_scroll_loop_l3:
   ;print line zero 20 chars
+  inx ;keep only here to count only 20 columns and not one column per line
+      ;as it would be if I keep it on l1, l2 and l0
   iny
   lda (pscroll_l3_low),y
   jsr print_char 
+  cpx max_columns_scroll ;end all when we are at the last column of line 3
+  beq print_scroll_end
   cpy #$13 ;19 20 decimal characters printed on the line from 0 to 19
   bne print_scroll_loop_l3
   rts
