@@ -130,9 +130,9 @@ start_demo:
   jsr invaders_playing_ms
   jsr demo_ms_p4;
   jsr scroller_start;
+  jsr demo_ms_p5;
   jsr lore_start_ms
   jsr lore_playing_ms
-  jsr demo_ms_p4;
   jsr demo_ms_final
   jmp start_demo
 
