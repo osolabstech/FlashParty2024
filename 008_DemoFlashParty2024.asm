@@ -409,7 +409,7 @@ scroller_start:
   jsr add_custom_chars_scroll
   jsr initilize_display
   jsr clear_display
-  lda #$A0 ;max columns scroll
+  lda #$B0 ;max columns scroll
   sta max_columns_scroll
   lda #$00
   sta columns_counter
@@ -442,7 +442,7 @@ print_scroll_screen_loop:
   lda columns_counter
   cmp max_columns_scroll ;end all when we are at the last column of line 3
   beq print_scroll_end
-  jsr DELAY_HALF_SEC ; delay half a second to see the effect
+  jsr DELAY_onetenth_SEC ; delay half a second to see the effect
   jsr inc_all_pscroll_lines
   jmp print_scroll_screen_loop
 
