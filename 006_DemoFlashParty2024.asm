@@ -117,6 +117,8 @@ RESET:
   jsr initilize_display
 
 start_demo:  
+  jsr demo_ms_p4;
+  jsr print_scroll;
   jsr demo_ms_p1;
   jsr pacman_start_ms;
   jsr pacman_playing_ms;
@@ -252,23 +254,6 @@ scroll_playing_ms:
   jsr multi_screen_print
   rts  
 
-demo_final_part:
-  ;Draw Screen 1 Final Demo
-  lda #<screen1_final_demo
-  sta charDataVectorLow
-  lda #>screen1_final_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  ;Draw Screen 2 Final Demo
-  lda #<screen2_final_demo
-  sta charDataVectorLow
-  lda #>screen2_final_demo
-  sta charDataVectorHigh
-  jsr print_ascii_screen
-  jsr delay_3_sec
-  rts 
-
 enter_into_loop:
   jmp loop
 
@@ -308,6 +293,19 @@ demo_ms_p3:
   lda #<screen1_demo_p3
   sta charDataVectorLow
   lda #>screen1_demo_p3
+  sta charDataVectorHigh
+  jsr multi_ascii_screen_print
+  rts
+
+demo_ms_p4:
+  lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
+  sta mas_record_lenght  
+  lda #$01 ;set to 8 screens for final part  of the demo
+  sta mas_screen_top
+  ;load the first screen
+  lda #<screen1_demo_p4
+  sta charDataVectorLow
+  lda #>screen1_demo_p4
   sta charDataVectorHigh
   jsr multi_ascii_screen_print
   rts
@@ -1233,6 +1231,11 @@ screen2_demo_p3:
 
 ;End third demo here an run FROGGER
 
+screen1_demo_p4:
+  .asciiz "     aaaaaaaaa      "
+  .asciiz "                    "
+  .asciiz "   Se Scrollear     "
+  .asciiz "                    "
 
 screen1_final_demo:
   .asciiz "     Y buenoooo     "
