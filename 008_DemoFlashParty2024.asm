@@ -402,9 +402,10 @@ test_custom_chars_loop
   jsr print_char
   cpx #$07
   bne test_custom_chars_loop
+  rts
 
 scroller_start:
-  jsr add_custom_chars_end_scroll
+  jsr add_custom_chars_scroll
   jsr initilize_display
   jsr clear_display
   jsr test_custom_chars
