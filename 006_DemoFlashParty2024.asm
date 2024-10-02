@@ -118,6 +118,7 @@ RESET:
 
 start_demo:  
   jsr demo_ms_p4;
+  jsr scroll_start_ms;
   jsr scroller_start;
   jsr demo_ms_p1;
   jsr pacman_start_ms;
@@ -1703,7 +1704,7 @@ scroll_char_5:
 scroll_char_6:
   .byte $1f, $1f, $1f, $1f, $00, $00, $00, $00 
 scroll_char_7:
-  .byte $1f, $1f, $1f, $1f, $1f, $1f, $1f, $1f
+  .byte $1f,$1f,$1f,$1f,$1f,$1f,$1f,$1f
 
 ;complete the file
   .org $fffc ;go to memory address $fffc of the reset vector
