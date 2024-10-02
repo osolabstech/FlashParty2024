@@ -433,6 +433,7 @@ scroller_start:
   rts
 
 print_scroll_screen_loop:
+  jsr clear_display
   jsr print_scroll_l0
   jsr print_scroll_l1
   jsr print_scroll_l2
