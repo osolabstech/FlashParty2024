@@ -118,8 +118,6 @@ RESET:
   jsr initilize_display
 
 start_demo:  
-  jsr lore_start_ms
-  jsr lore_playing_ms
   jsr demo_ms_p1;
   jsr pacman_start_ms;
   jsr pacman_playing_ms;
@@ -132,6 +130,9 @@ start_demo:
   jsr invaders_playing_ms
   jsr demo_ms_p4;
   jsr scroller_start;
+  jsr lore_start_ms
+  jsr lore_playing_ms
+  jsr demo_ms_p4;
   jsr demo_ms_final
   jmp start_demo
 
@@ -333,6 +334,19 @@ demo_ms_p4:
   lda #<screen1_demo_p4
   sta charDataVectorLow
   lda #>screen1_demo_p4
+  sta charDataVectorHigh
+  jsr multi_ascii_screen_print
+  rts
+
+demo_ms_p5:
+  lda #$15 ;set the record lenght on 21 characters, 20 letters and the terminator $00
+  sta mas_record_lenght  
+  lda #$01 ;set to 8 screens for final part  of the demo
+  sta mas_screen_top
+  ;load the first screen
+  lda #<screen1_demo_p5
+  sta charDataVectorLow
+  lda #>screen1_demo_p5
   sta charDataVectorHigh
   jsr multi_ascii_screen_print
   rts
@@ -1372,9 +1386,15 @@ screen2_demo_p3:
 ;End third demo here an run FROGGER
 
 screen1_demo_p4:
-  .asciiz "     aaaaaaaaa      "
   .asciiz "                    "
-  .asciiz "   Se Scrollear     "
+  .asciiz "    Se Scrollear    "
+  .asciiz "                    "
+  .asciiz "                    "
+
+screen1_demo_p5:
+  .asciiz "   y soy amiga de   "
+  .asciiz "                    "
+  .asciiz "      SABREMAN      "
   .asciiz "                    "
 
 screen1_final_demo:
@@ -1390,9 +1410,9 @@ screen2_final_demo:
   .asciiz "                    "
 
 screen3_final_demo:
-  .asciiz "Alecu               "
-  .asciiz "    Carlinho        "
-  .asciiz "           ElVelazco"
+  .asciiz "  Alecu             "
+  .asciiz "      Carlinho      "
+  .asciiz "             Kraca  "
   .asciiz "                    "
 
 screen4_final_demo:
