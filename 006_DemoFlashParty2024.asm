@@ -118,7 +118,7 @@ RESET:
 
 start_demo:  
   jsr demo_ms_p4;
-  jsr scroll_start_ms;
+  ;jsr scroll_start_ms;
   jsr scroller_start;
   jsr demo_ms_p1;
   jsr pacman_start_ms;
@@ -394,12 +394,20 @@ done_l2:
 done_l3: 
   rts
 
+test_custom_chars:
+  ldx #$ff
+test_custom_chars_loop 
+  inx
+  txa
+  jsr print_char
+  cpx #$07
+  bne test_custom_chars_loop
+
 scroller_start:
   jsr add_custom_chars_end_scroll
   jsr initilize_display
   jsr clear_display
-  lda #$07
-  jsr print_char
+  jsr test_custom_chars
   jsr delay_5_sec
   lda #$23 ;max columns scroll
   sta max_columns_scroll
