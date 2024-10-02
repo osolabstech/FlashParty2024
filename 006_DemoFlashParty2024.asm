@@ -1657,6 +1657,769 @@ scroll_screen_4:
   .byte pos_lcd_initial_line3,$00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $07, $00,end_char
 
 
+
+lore_screen_0:
+;                     
+;                     
+;                     
+;                     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_1:
+;                     
+;                     
+;                     
+;           ▄▄ ▄      
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_2:
+;                     
+;                     
+;                     
+;         ▄▄█▀▄▀▄     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 7, 6, 5, 6, 5, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_3:
+;                     
+;                     
+;           ▄▄ ▄      
+;        ▄██▀▄█▄▀▄    
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 5, 7, 7, 6, 5, 7, 5, 6, 5, 0, 0, 0, 0
+  .byte end_char
+lore_screen_4:
+;                     
+;                     
+;         ▄▄█▀▄▀▄     
+;        ▀▀▀ ▀██▄▀▄   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 7, 6, 5, 6, 5, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 6, 7, 7, 5, 6, 5, 0, 0, 0
+  .byte end_char
+lore_screen_5:
+;                     
+;           ▄▄ ▄      
+;        ▄██▀▄█▄▀▄    
+;      ▄▄▄▄▄▄▄▀▀█ █   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 5, 7, 7, 6, 5, 7, 5, 6, 5, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 6, 6, 7, 0, 7, 0, 0, 0
+  .byte end_char
+lore_screen_6:
+;                     
+;         ▄▄█▀▄▀▄     
+;        ▀▀▀ ▀██▄▀▄   
+;    ▄▄▀▀▀▀▀▀▀▄▄▀ █▄  
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 7, 6, 5, 6, 5, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 6, 7, 7, 5, 6, 5, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 5, 5, 6, 6, 6, 6, 6, 6, 6, 5, 5, 6, 0, 7, 5, 0, 0
+  .byte end_char
+lore_screen_7:
+;           ▄▄ ▄      
+;        ▄██▀▄█▄▀▄    
+;      ▄▄▄▄▄▄▄▀▀█ █   
+;   ▄▀▀       ▀▀▄▄▀█  
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 5, 7, 7, 6, 5, 7, 5, 6, 5, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 6, 6, 7, 0, 7, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 5, 6, 6, 0, 0, 0, 0, 0, 0, 0, 6, 6, 5, 5, 6, 7, 0, 0
+  .byte end_char
+lore_screen_8:
+;         ▄▄█▀▄▀▄     
+;        ▀▀▀ ▀██▄▀▄   
+;    ▄▄▀▀▀▀▀▀▀▄▄▀ █▄  
+;   █    ▄▄ ▄▄  ▀▀▄▀  
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 7, 6, 5, 6, 5, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 6, 7, 7, 5, 6, 5, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 5, 5, 6, 6, 6, 6, 6, 6, 6, 5, 5, 6, 0, 7, 5, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 7, 0, 0, 0, 0, 5, 5, 0, 5, 5, 0, 0, 6, 6, 5, 6, 0, 0
+  .byte end_char
+lore_screen_9:
+;        ▄██▀▄█▄▀▄    
+;      ▄▄▄▄▄▄▄▀▀█ █   
+;   ▄▀▀       ▀▀▄▄▀█  
+;   ▀▄   █▀▄▀█    ▀▄  
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 7, 6, 5, 7, 5, 6, 5, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 6, 6, 7, 0, 7, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 5, 6, 6, 0, 0, 0, 0, 0, 0, 0, 6, 6, 5, 5, 6, 7, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 6, 5, 0, 0, 0, 7, 6, 5, 6, 7, 0, 0, 0, 0, 6, 5, 0, 0
+  .byte end_char
+lore_screen_10:
+;        ▀▀▀ ▀██▄▀▄   
+;    ▄▄▀▀▀▀▀▀▀▄▄▀ █▄  
+;   █    ▄▄ ▄▄  ▀▀▄▀  
+;    ▀▄  ▀▄█ ▀     ▀▄ 
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 6, 7, 7, 5, 6, 5, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 5, 5, 6, 6, 6, 6, 6, 6, 6, 5, 5, 6, 0, 7, 5, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 7, 0, 0, 0, 0, 5, 5, 0, 5, 5, 0, 0, 6, 6, 5, 6, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 6, 5, 0, 0, 6, 5, 7, 0, 6, 0, 0, 0, 0, 0, 6, 5, 0
+  .byte end_char
+lore_screen_11:
+;      ▄▄▄▄▄▄▄▀▀█ █   
+;   ▄▀▀       ▀▀▄▄▀█  
+;   ▀▄   █▀▄▀█    ▀▄  
+;     ▀▄  ██   ▄    █ 
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 6, 6, 7, 0, 7, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 5, 6, 6, 0, 0, 0, 0, 0, 0, 0, 6, 6, 5, 5, 6, 7, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 6, 5, 0, 0, 0, 7, 6, 5, 6, 7, 0, 0, 0, 0, 6, 5, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 6, 5, 0, 0, 7, 7, 0, 0, 0, 5, 0, 0, 0, 0, 7, 0
+  .byte end_char
+lore_screen_12:
+;    ▄▄▀▀▀▀▀▀▀▄▄▀ █▄  
+;   █    ▄▄ ▄▄  ▀▀▄▀  
+;    ▀▄  ▀▄█ ▀     ▀▄ 
+;      ▀▄ ▀▀   █▄▄ ▄▀ 
+  .byte pos_lcd_initial_line0, 0, 0, 0, 5, 5, 6, 6, 6, 6, 6, 6, 6, 5, 5, 6, 0, 7, 5, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 7, 0, 0, 0, 0, 5, 5, 0, 5, 5, 0, 0, 6, 6, 5, 6, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 6, 5, 0, 0, 6, 5, 7, 0, 6, 0, 0, 0, 0, 0, 6, 5, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 6, 5, 0, 6, 6, 0, 0, 0, 7, 5, 5, 0, 5, 6, 0
+  .byte end_char
+lore_screen_13:
+;   ▄▀▀       ▀▀▄▄▀█  
+;   ▀▄   █▀▄▀█    ▀▄  
+;     ▀▄  ██   ▄    █ 
+;      ▄█▄   ▄▄███▄█  
+  .byte pos_lcd_initial_line0, 0, 0, 5, 6, 6, 0, 0, 0, 0, 0, 0, 0, 6, 6, 5, 5, 6, 7, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 6, 5, 0, 0, 0, 7, 6, 5, 6, 7, 0, 0, 0, 0, 6, 5, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 6, 5, 0, 0, 7, 7, 0, 0, 0, 5, 0, 0, 0, 0, 7, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 5, 7, 5, 0, 0, 0, 5, 5, 7, 7, 7, 5, 7, 0, 0
+  .byte end_char
+lore_screen_14:
+;   █    ▄▄ ▄▄  ▀▀▄▀  
+;    ▀▄  ▀▄█ ▀     ▀▄ 
+;      ▀▄ ▀▀   █▄▄ ▄▀ 
+;     ▄███▄▄▄███████▄ 
+  .byte pos_lcd_initial_line0, 0, 0, 7, 0, 0, 0, 0, 5, 5, 0, 5, 5, 0, 0, 6, 6, 5, 6, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 6, 5, 0, 0, 6, 5, 7, 0, 6, 0, 0, 0, 0, 0, 6, 5, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 6, 5, 0, 6, 6, 0, 0, 0, 7, 5, 5, 0, 5, 6, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 5, 7, 7, 7, 5, 5, 5, 7, 7, 7, 7, 7, 7, 7, 5, 0
+  .byte end_char
+lore_screen_15:
+;   ▀▄   █▀▄▀█    ▀▄  
+;     ▀▄  ██   ▄    █ 
+;      ▄█▄   ▄▄███▄█  
+;    ▄███▀███████████▄
+  .byte pos_lcd_initial_line0, 0, 0, 6, 5, 0, 0, 0, 7, 6, 5, 6, 7, 0, 0, 0, 0, 6, 5, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 6, 5, 0, 0, 7, 7, 0, 0, 0, 5, 0, 0, 0, 0, 7, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 5, 7, 5, 0, 0, 0, 5, 5, 7, 7, 7, 5, 7, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 5, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5
+  .byte end_char
+lore_screen_16:
+;    ▀▄  ▀▄█ ▀     ▀▄ 
+;      ▀▄ ▀▀   █▄▄ ▄▀ 
+;     ▄███▄▄▄███████▄ 
+;    ▀███ ██████▀████▀
+  .byte pos_lcd_initial_line0, 0, 0, 0, 6, 5, 0, 0, 6, 5, 7, 0, 6, 0, 0, 0, 0, 0, 6, 5, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 6, 5, 0, 6, 6, 0, 0, 0, 7, 5, 5, 0, 5, 6, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 5, 7, 7, 7, 5, 5, 5, 7, 7, 7, 7, 7, 7, 7, 5, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 6, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 6, 7, 7, 7, 7, 6
+  .byte end_char
+lore_screen_17:
+;     ▀▄  ██   ▄    █ 
+;      ▄█▄   ▄▄███▄█  
+;    ▄███▀███████████▄
+;   ▄▄▀█▀▄██████▄▀██▀▄
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 6, 5, 0, 0, 7, 7, 0, 0, 0, 5, 0, 0, 0, 0, 7, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 5, 7, 5, 0, 0, 0, 5, 5, 7, 7, 7, 5, 7, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 5, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5
+  .byte pos_lcd_initial_line3, 0, 0, 5, 5, 6, 7, 6, 5, 7, 7, 7, 7, 7, 7, 5, 6, 7, 7, 6, 5
+  .byte end_char
+lore_screen_18:
+;      ▀▄ ▀▀   █▄▄ ▄▀ 
+;     ▄███▄▄▄███████▄ 
+;    ▀███ ██████▀████▀
+;  ▄██▄▀ ████████ ▀▀▄█
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 6, 5, 0, 6, 6, 0, 0, 0, 7, 5, 5, 0, 5, 6, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 5, 7, 7, 7, 5, 5, 5, 7, 7, 7, 7, 7, 7, 7, 5, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 6, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 6, 7, 7, 7, 7, 6
+  .byte pos_lcd_initial_line3, 0, 5, 7, 7, 5, 6, 0, 7, 7, 7, 7, 7, 7, 7, 7, 0, 6, 6, 5, 7
+  .byte end_char
+lore_screen_19:
+;      ▄█▄   ▄▄███▄█  
+;    ▄███▀███████████▄
+;   ▄▄▀█▀▄██████▄▀██▀▄
+; ▄███▀  ▀▀▀███▀▀▄ ▄██
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 5, 7, 5, 0, 0, 0, 5, 5, 7, 7, 7, 5, 7, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 5, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5
+  .byte pos_lcd_initial_line2, 0, 0, 5, 5, 6, 7, 6, 5, 7, 7, 7, 7, 7, 7, 5, 6, 7, 7, 6, 5
+  .byte pos_lcd_initial_line3, 5, 7, 7, 7, 6, 0, 0, 6, 6, 6, 7, 7, 7, 6, 6, 5, 0, 5, 7, 7
+  .byte end_char
+lore_screen_20:
+;     ▄███▄▄▄███████▄ 
+;    ▀███ ██████▀████▀
+;  ▄██▄▀ ████████ ▀▀▄█
+; ██▀▀   ▄▄▄▀▀▀▄▄█ ███
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 5, 7, 7, 7, 5, 5, 5, 7, 7, 7, 7, 7, 7, 7, 5, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 6, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 6, 7, 7, 7, 7, 6
+  .byte pos_lcd_initial_line2, 0, 5, 7, 7, 5, 6, 0, 7, 7, 7, 7, 7, 7, 7, 7, 0, 6, 6, 5, 7
+  .byte pos_lcd_initial_line3, 7, 7, 6, 6, 0, 0, 0, 5, 5, 5, 6, 6, 6, 5, 5, 7, 0, 7, 7, 7
+  .byte end_char
+lore_screen_21:
+;    ▄███▀███████████▄
+;   ▄▄▀█▀▄██████▄▀██▀▄
+; ▄███▀  ▀▀▀███▀▀▄ ▄██
+; ▀▀     ███ ▄▄██▀▄██▀
+  .byte pos_lcd_initial_line0, 0, 0, 0, 5, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5
+  .byte pos_lcd_initial_line1, 0, 0, 5, 5, 6, 7, 6, 5, 7, 7, 7, 7, 7, 7, 5, 6, 7, 7, 6, 5
+  .byte pos_lcd_initial_line2, 5, 7, 7, 7, 6, 0, 0, 6, 6, 6, 7, 7, 7, 6, 6, 5, 0, 5, 7, 7
+  .byte pos_lcd_initial_line3, 6, 6, 0, 0, 0, 0, 0, 7, 7, 7, 0, 5, 5, 7, 7, 6, 5, 7, 7, 6
+  .byte end_char
+lore_screen_22:
+;    ▀███ ██████▀████▀
+;  ▄██▄▀ ████████ ▀▀▄█
+; ██▀▀   ▄▄▄▀▀▀▄▄█ ███
+;        ▀██ ████ ██▀ 
+  .byte pos_lcd_initial_line0, 0, 0, 0, 6, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 6, 7, 7, 7, 7, 6
+  .byte pos_lcd_initial_line1, 0, 5, 7, 7, 5, 6, 0, 7, 7, 7, 7, 7, 7, 7, 7, 0, 6, 6, 5, 7
+  .byte pos_lcd_initial_line2, 7, 7, 6, 6, 0, 0, 0, 5, 5, 5, 6, 6, 6, 5, 5, 7, 0, 7, 7, 7
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7, 0, 7, 7, 7, 7, 0, 7, 7, 6, 0
+  .byte end_char
+lore_screen_23:
+;   ▄▄▀█▀▄██████▄▀██▀▄
+; ▄███▀  ▀▀▀███▀▀▄ ▄██
+; ▀▀     ███ ▄▄██▀▄██▀
+;         ██ ████▄▀▀  
+  .byte pos_lcd_initial_line0, 0, 0, 5, 5, 6, 7, 6, 5, 7, 7, 7, 7, 7, 7, 5, 6, 7, 7, 6, 5
+  .byte pos_lcd_initial_line1, 5, 7, 7, 7, 6, 0, 0, 6, 6, 6, 7, 7, 7, 6, 6, 5, 0, 5, 7, 7
+  .byte pos_lcd_initial_line2, 6, 6, 0, 0, 0, 0, 0, 7, 7, 7, 0, 5, 5, 7, 7, 6, 5, 7, 7, 6
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 0, 7, 7, 7, 7, 5, 6, 6, 0, 0
+  .byte end_char
+lore_screen_24:
+;  ▄██▄▀ ████████ ▀▀▄█
+; ██▀▀   ▄▄▄▀▀▀▄▄█ ███
+;        ▀██ ████ ██▀ 
+;         ▀▀ ██▀▀▀    
+  .byte pos_lcd_initial_line0, 0, 5, 7, 7, 5, 6, 0, 7, 7, 7, 7, 7, 7, 7, 7, 0, 6, 6, 5, 7
+  .byte pos_lcd_initial_line1, 7, 7, 6, 6, 0, 0, 0, 5, 5, 5, 6, 6, 6, 5, 5, 7, 0, 7, 7, 7
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7, 0, 7, 7, 7, 7, 0, 7, 7, 6, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 7, 7, 6, 6, 6, 0, 0, 0, 0
+  .byte end_char
+lore_screen_25:
+; ▄███▀  ▀▀▀███▀▀▄ ▄██
+; ▀▀     ███ ▄▄██▀▄██▀
+;         ██ ████▄▀▀  
+;          ▄ ▀▀ ▄▄    
+  .byte pos_lcd_initial_line0, 5, 7, 7, 7, 6, 0, 0, 6, 6, 6, 7, 7, 7, 6, 6, 5, 0, 5, 7, 7
+  .byte pos_lcd_initial_line1, 6, 6, 0, 0, 0, 0, 0, 7, 7, 7, 0, 5, 5, 7, 7, 6, 5, 7, 7, 6
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 0, 7, 7, 7, 7, 5, 6, 6, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 6, 6, 0, 5, 5, 0, 0, 0, 0
+  .byte end_char
+lore_screen_26:
+; ██▀▀   ▄▄▄▀▀▀▄▄█ ███
+;        ▀██ ████ ██▀ 
+;         ▀▀ ██▀▀▀    
+;          ▀▄▄▄ ██    
+  .byte pos_lcd_initial_line0, 7, 7, 6, 6, 0, 0, 0, 5, 5, 5, 6, 6, 6, 5, 5, 7, 0, 7, 7, 7
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7, 0, 7, 7, 7, 7, 0, 7, 7, 6, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 7, 7, 6, 6, 6, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 5, 5, 5, 0, 7, 7, 0, 0, 0, 0
+  .byte end_char
+lore_screen_27:
+; ▀▀     ███ ▄▄██▀▄██▀
+;         ██ ████▄▀▀  
+;          ▄ ▀▀ ▄▄    
+;       ▄▄ ▄███ ▀▀▄   
+  .byte pos_lcd_initial_line0, 6, 6, 0, 0, 0, 0, 0, 7, 7, 7, 0, 5, 5, 7, 7, 6, 5, 7, 7, 6
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 0, 7, 7, 7, 7, 5, 6, 6, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 6, 6, 0, 5, 5, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 5, 5, 0, 5, 7, 7, 7, 0, 6, 6, 5, 0, 0, 0
+  .byte end_char
+lore_screen_28:
+;        ▀██ ████ ██▀ 
+;         ▀▀ ██▀▀▀    
+;          ▀▄▄▄ ██    
+;       ██▄█▀▀▀▄▄▄█   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7, 0, 7, 7, 7, 7, 0, 7, 7, 6, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 7, 7, 6, 6, 6, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 5, 5, 5, 0, 7, 7, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 7, 7, 5, 7, 6, 6, 6, 5, 5, 5, 7, 0, 0, 0
+  .byte end_char
+lore_screen_29:
+;         ██ ████▄▀▀  
+;          ▄ ▀▀ ▄▄    
+;       ▄▄ ▄███ ▀▀▄   
+;       ███▀▄  ▀███   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 0, 7, 7, 7, 7, 5, 6, 6, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 6, 6, 0, 5, 5, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 5, 5, 0, 5, 7, 7, 7, 0, 6, 6, 5, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 7, 7, 7, 6, 5, 0, 0, 6, 7, 7, 7, 0, 0, 0
+  .byte end_char
+lore_screen_30:
+;         ▀▀ ██▀▀▀    
+;          ▀▄▄▄ ██    
+;       ██▄█▀▀▀▄▄▄█   
+;       ▀▀▀ █▄▄▄█▀▀   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 7, 7, 6, 6, 6, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 5, 5, 5, 0, 7, 7, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 7, 7, 5, 7, 6, 6, 6, 5, 5, 5, 7, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 7, 5, 5, 5, 7, 6, 6, 0, 0, 0
+  .byte end_char
+lore_screen_31:
+;          ▄ ▀▀ ▄▄    
+;       ▄▄ ▄███ ▀▀▄   
+;       ███▀▄  ▀███   
+;           ▀██▀▀     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 6, 6, 0, 5, 5, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 5, 5, 0, 5, 7, 7, 7, 0, 6, 6, 5, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 7, 7, 7, 6, 5, 0, 0, 6, 7, 7, 7, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7, 6, 6, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_32:
+;          ▀▄▄▄ ██    
+;       ██▄█▀▀▀▄▄▄█   
+;       ▀▀▀ █▄▄▄█▀▀   
+;            ▀▀       
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 5, 5, 5, 0, 7, 7, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 7, 7, 5, 7, 6, 6, 6, 5, 5, 5, 7, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 7, 5, 5, 5, 7, 6, 6, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_33:
+;       ▄▄ ▄███ ▀▀▄   
+;       ███▀▄  ▀███   
+;           ▀██▀▀     
+;                     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 5, 7, 7, 7, 0, 6, 6, 5, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 7, 7, 7, 6, 5, 0, 0, 6, 7, 7, 7, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7, 6, 6, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_34:
+;       ██▄█▀▀▀▄▄▄█   
+;       ▀▀▀ █▄▄▄█▀▀   
+;            ▀▀       
+;                     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 7, 7, 5, 7, 6, 6, 6, 5, 5, 5, 7, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 7, 5, 5, 5, 7, 6, 6, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_35:
+;       ███▀▄  ▀███   
+;           ▀██▀▀     
+;                     
+;                     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 6, 5, 0, 0, 6, 7, 7, 7, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7, 6, 6, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_36:
+;       ▀▀▀ █▄▄▄█▀▀   
+;            ▀▀       
+;                     
+;    ▄              ▄ 
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 7, 5, 5, 5, 7, 6, 6, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0
+  .byte end_char
+lore_screen_37:
+;           ▀██▀▀     
+;                     
+;                     
+;    ▀▄▄          ▄▄▀ 
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7, 6, 6, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 6, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 6, 0
+  .byte end_char
+lore_screen_38:
+;            ▀▀       
+;                     
+;    ▄              ▄ 
+;     ██▄▄ ▄▄▄▄▄ ▄██  
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 7, 7, 5, 5, 0, 5, 5, 5, 5, 5, 0, 5, 7, 7, 0, 0
+  .byte end_char
+lore_screen_39:
+;                     
+;                     
+;    ▀▄▄          ▄▄▀ 
+;     ▀███▄█████▄▀██  
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 6, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 6, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 6, 7, 7, 7, 5, 7, 7, 7, 7, 7, 5, 6, 7, 7, 0, 0
+  .byte end_char
+lore_screen_40:
+;                     
+;    ▄              ▄ 
+;     ██▄▄ ▄▄▄▄▄ ▄██  
+;      ██████████▄▀█  
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 7, 7, 5, 5, 0, 5, 5, 5, 5, 5, 0, 5, 7, 7, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5, 6, 7, 0, 0
+  .byte end_char
+lore_screen_41:
+;                     
+;    ▀▄▄          ▄▄▀ 
+;     ▀███▄█████▄▀██  
+;      ▀████▀▀█▀▀█▄▀  
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 6, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 6, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 6, 7, 7, 7, 5, 7, 7, 7, 7, 7, 5, 6, 7, 7, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 6, 7, 7, 7, 7, 6, 6, 7, 6, 6, 7, 5, 6, 0, 0
+  .byte end_char
+lore_screen_42:
+;    ▄              ▄ 
+;     ██▄▄ ▄▄▄▄▄ ▄██  
+;      ██████████▄▀█  
+;       ████ ▄█▄ █▀   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 7, 7, 5, 5, 0, 5, 5, 5, 5, 5, 0, 5, 7, 7, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5, 6, 7, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 5, 7, 5, 0, 7, 6, 0, 0, 0
+  .byte end_char
+lore_screen_43:
+;    ▀▄▄          ▄▄▀ 
+;     ▀███▄█████▄▀██  
+;      ▀████▀▀█▀▀█▄▀  
+;      ▄▀███▄███▄█    
+  .byte pos_lcd_initial_line0, 0, 0, 0, 6, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 6, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 6, 7, 7, 7, 5, 7, 7, 7, 7, 7, 5, 6, 7, 7, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 6, 7, 7, 7, 7, 6, 6, 7, 6, 6, 7, 5, 6, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 5, 6, 7, 7, 7, 5, 7, 7, 7, 5, 7, 0, 0, 0, 0
+  .byte end_char
+lore_screen_44:
+;     ██▄▄ ▄▄▄▄▄ ▄██  
+;      ██████████▄▀█  
+;       ████ ▄█▄ █▀   
+;      █▄█████████▄   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 7, 7, 5, 5, 0, 5, 5, 5, 5, 5, 0, 5, 7, 7, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5, 6, 7, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 5, 7, 5, 0, 7, 6, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 7, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5, 0, 0, 0
+  .byte end_char
+lore_screen_45:
+;     ▀███▄█████▄▀██  
+;      ▀████▀▀█▀▀█▄▀  
+;      ▄▀███▄███▄█    
+;      █████▀██▀█▀█   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 6, 7, 7, 7, 5, 7, 7, 7, 7, 7, 5, 6, 7, 7, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 6, 7, 7, 7, 7, 6, 6, 7, 6, 6, 7, 5, 6, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 5, 6, 7, 7, 7, 5, 7, 7, 7, 5, 7, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 6, 7, 7, 6, 7, 6, 7, 0, 0, 0
+  .byte end_char
+lore_screen_46:
+;      ██████████▄▀█  
+;       ████ ▄█▄ █▀   
+;      █▄█████████▄   
+;      █████▄▀█▄█▄█   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5, 6, 7, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 5, 7, 5, 0, 7, 6, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 7, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 5, 6, 7, 5, 7, 5, 7, 0, 0, 0
+  .byte end_char
+lore_screen_47:
+;      ▀████▀▀█▀▀█▄▀  
+;      ▄▀███▄███▄█    
+;      █████▀██▀█▀█   
+;    ▄▄▀▀▀▀██ █▀▀▀█   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 6, 7, 7, 7, 7, 6, 6, 7, 6, 6, 7, 5, 6, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 5, 6, 7, 7, 7, 5, 7, 7, 7, 5, 7, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 6, 7, 7, 6, 7, 6, 7, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 5, 5, 6, 6, 6, 6, 7, 7, 0, 7, 6, 6, 6, 7, 0, 0, 0
+  .byte end_char
+lore_screen_48:
+;       ████ ▄█▄ █▀   
+;      █▄█████████▄   
+;      █████▄▀█▄█▄█   
+;   ▄██▄▄▄▄▀█ █ ▄ ▀   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 5, 7, 5, 0, 7, 6, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 7, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 5, 6, 7, 5, 7, 5, 7, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 5, 7, 7, 5, 5, 5, 5, 6, 7, 0, 7, 0, 5, 0, 6, 0, 0, 0
+  .byte end_char
+lore_screen_49:
+;      ▄▀███▄███▄█    
+;      █████▀██▀█▀█   
+;    ▄▄▀▀▀▀██ █▀▀▀█   
+;   ███████▄▀ ▀▄█▄    
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 5, 6, 7, 7, 7, 5, 7, 7, 7, 5, 7, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 6, 7, 7, 6, 7, 6, 7, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 5, 5, 6, 6, 6, 6, 7, 7, 0, 7, 6, 6, 6, 7, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 7, 7, 7, 7, 7, 7, 7, 5, 6, 0, 6, 5, 7, 5, 0, 0, 0, 0
+  .byte end_char
+lore_screen_50:
+;      █▄█████████▄   
+;      █████▄▀█▄█▄█   
+;   ▄██▄▄▄▄▀█ █ ▄ ▀   
+;   ████████▄▄▄▀▀▀    
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 7, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 5, 6, 7, 5, 7, 5, 7, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 5, 7, 7, 5, 5, 5, 5, 6, 7, 0, 7, 0, 5, 0, 6, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 5, 5, 5, 6, 6, 6, 0, 0, 0, 0
+  .byte end_char
+lore_screen_51:
+;      █████▀██▀█▀█   
+;    ▄▄▀▀▀▀██ █▀▀▀█   
+;   ███████▄▀ ▀▄█▄    
+;  ▄████▀██████▄▄     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 6, 7, 7, 6, 7, 6, 7, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 5, 5, 6, 6, 6, 6, 7, 7, 0, 7, 6, 6, 6, 7, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 7, 7, 7, 7, 7, 7, 7, 5, 6, 0, 6, 5, 7, 5, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 5, 7, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 5, 5, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_52:
+;      █████▄▀█▄█▄█   
+;   ▄██▄▄▄▄▀█ █ ▄ ▀   
+;   ████████▄▄▄▀▀▀    
+;  █████ ████████ ▄▄  
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 5, 6, 7, 5, 7, 5, 7, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 5, 7, 7, 5, 5, 5, 5, 6, 7, 0, 7, 0, 5, 0, 6, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 5, 5, 5, 6, 6, 6, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 7, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 0, 5, 5, 0, 0
+  .byte end_char
+lore_screen_53:
+;    ▄▄▀▀▀▀██ █▀▀▀█   
+;   ███████▄▀ ▀▄█▄    
+;  ▄████▀██████▄▄     
+;  ████▀▄████████ ██▄ 
+  .byte pos_lcd_initial_line0, 0, 0, 0, 5, 5, 6, 6, 6, 6, 7, 7, 0, 7, 6, 6, 6, 7, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 7, 7, 7, 7, 7, 7, 7, 5, 6, 0, 6, 5, 7, 5, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 5, 7, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 5, 5, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 7, 7, 7, 7, 6, 5, 7, 7, 7, 7, 7, 7, 7, 7, 0, 7, 7, 5, 0
+  .byte end_char
+lore_screen_54:
+;   ▄██▄▄▄▄▀█ █ ▄ ▀   
+;   ████████▄▄▄▀▀▀    
+;  █████ ████████ ▄▄  
+; ▄████ █████████ ▀██▄
+  .byte pos_lcd_initial_line0, 0, 0, 5, 7, 7, 5, 5, 5, 5, 6, 7, 0, 7, 0, 5, 0, 6, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 5, 5, 5, 6, 6, 6, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 7, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 0, 5, 5, 0, 0
+  .byte pos_lcd_initial_line3, 5, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 6, 7, 7, 5
+  .byte end_char
+lore_screen_55:
+;   ███████▄▀ ▀▄█▄    
+;  ▄████▀██████▄▄     
+;  ████▀▄████████ ██▄ 
+; ▀████ █████████  ▀██
+  .byte pos_lcd_initial_line0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 5, 6, 0, 6, 5, 7, 5, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 5, 7, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 5, 5, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 7, 7, 7, 7, 6, 5, 7, 7, 7, 7, 7, 7, 7, 7, 0, 7, 7, 5, 0
+  .byte pos_lcd_initial_line3, 6, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 6, 7, 7
+  .byte end_char
+lore_screen_56:
+;   ████████▄▄▄▀▀▀    
+;  █████ ████████ ▄▄  
+; ▄████ █████████ ▀██▄
+;  ▀███▄▀███████▀   █▀
+  .byte pos_lcd_initial_line0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 5, 5, 5, 6, 6, 6, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 7, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 0, 5, 5, 0, 0
+  .byte pos_lcd_initial_line2, 5, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 6, 7, 7, 5
+  .byte pos_lcd_initial_line3, 0, 6, 7, 7, 7, 5, 6, 7, 7, 7, 7, 7, 7, 7, 6, 0, 0, 0, 7, 6
+  .byte end_char
+lore_screen_57:
+;  ▄████▀██████▄▄     
+;  ████▀▄████████ ██▄ 
+; ▀████ █████████  ▀██
+;   ▀███▄▀██▀███▄  ▄▀ 
+  .byte pos_lcd_initial_line0, 0, 5, 7, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 5, 5, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 7, 7, 7, 7, 6, 5, 7, 7, 7, 7, 7, 7, 7, 7, 0, 7, 7, 5, 0
+  .byte pos_lcd_initial_line2, 6, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 6, 7, 7
+  .byte pos_lcd_initial_line3, 0, 0, 6, 7, 7, 7, 5, 6, 7, 7, 6, 7, 7, 7, 5, 0, 0, 5, 6, 0
+  .byte end_char
+lore_screen_58:
+;  █████ ████████ ▄▄  
+; ▄████ █████████ ▀██▄
+;  ▀███▄▀███████▀   █▀
+;    ▀▀██▄▀█ ████  ▀  
+  .byte pos_lcd_initial_line0, 0, 7, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 0, 5, 5, 0, 0
+  .byte pos_lcd_initial_line1, 5, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 6, 7, 7, 5
+  .byte pos_lcd_initial_line2, 0, 6, 7, 7, 7, 5, 6, 7, 7, 7, 7, 7, 7, 7, 6, 0, 0, 0, 7, 6
+  .byte pos_lcd_initial_line3, 0, 0, 0, 6, 6, 7, 7, 5, 6, 7, 0, 7, 7, 7, 7, 0, 0, 6, 0, 0
+  .byte end_char
+lore_screen_59:
+;  ████▀▄████████ ██▄ 
+; ▀████ █████████  ▀██
+;   ▀███▄▀██▀███▄  ▄▀ 
+;      ▀██▄▀ ███▀     
+  .byte pos_lcd_initial_line0, 0, 7, 7, 7, 7, 6, 5, 7, 7, 7, 7, 7, 7, 7, 7, 0, 7, 7, 5, 0
+  .byte pos_lcd_initial_line1, 6, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 6, 7, 7
+  .byte pos_lcd_initial_line2, 0, 0, 6, 7, 7, 7, 5, 6, 7, 7, 6, 7, 7, 7, 5, 0, 0, 5, 6, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 6, 7, 7, 5, 6, 0, 7, 7, 7, 6, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_60:
+; ▄████ █████████ ▀██▄
+;  ▀███▄▀███████▀   █▀
+;    ▀▀██▄▀█ ████  ▀  
+;      ▄▀██ ▄███      
+  .byte pos_lcd_initial_line0, 5, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 6, 7, 7, 5
+  .byte pos_lcd_initial_line1, 0, 6, 7, 7, 7, 5, 6, 7, 7, 7, 7, 7, 7, 7, 6, 0, 0, 0, 7, 6
+  .byte pos_lcd_initial_line2, 0, 0, 0, 6, 6, 7, 7, 5, 6, 7, 0, 7, 7, 7, 7, 0, 0, 6, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 5, 6, 7, 7, 0, 5, 7, 7, 7, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_61:
+; ▀████ █████████  ▀██
+;   ▀███▄▀██▀███▄  ▄▀ 
+;      ▀██▄▀ ███▀     
+;    ▄▄█ █▀ ███▀      
+  .byte pos_lcd_initial_line0, 6, 7, 7, 7, 7, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 6, 7, 7
+  .byte pos_lcd_initial_line1, 0, 0, 6, 7, 7, 7, 5, 6, 7, 7, 6, 7, 7, 7, 5, 0, 0, 5, 6, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 6, 7, 7, 5, 6, 0, 7, 7, 7, 6, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 5, 5, 7, 0, 7, 6, 0, 7, 7, 7, 6, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_62:
+;  ▀███▄▀███████▀   █▀
+;    ▀▀██▄▀█ ████  ▀  
+;      ▄▀██ ▄███      
+;   ▄██▀▄▀  ██▀       
+  .byte pos_lcd_initial_line0, 0, 6, 7, 7, 7, 5, 6, 7, 7, 7, 7, 7, 7, 7, 6, 0, 0, 0, 7, 6
+  .byte pos_lcd_initial_line1, 0, 0, 0, 6, 6, 7, 7, 5, 6, 7, 0, 7, 7, 7, 7, 0, 0, 6, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 5, 6, 7, 7, 0, 5, 7, 7, 7, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 5, 7, 7, 6, 5, 6, 0, 0, 7, 7, 6, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_63:
+;   ▀███▄▀██▀███▄  ▄▀ 
+;      ▀██▄▀ ███▀     
+;    ▄▄█ █▀ ███▀      
+;  ▄███▄▀  ▄██▄       
+  .byte pos_lcd_initial_line0, 0, 0, 6, 7, 7, 7, 5, 6, 7, 7, 6, 7, 7, 7, 5, 0, 0, 5, 6, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 6, 7, 7, 5, 6, 0, 7, 7, 7, 6, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 5, 5, 7, 0, 7, 6, 0, 7, 7, 7, 6, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 5, 7, 7, 7, 5, 6, 0, 0, 5, 7, 7, 5, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_64:
+;    ▀▀██▄▀█ ████  ▀  
+;      ▄▀██ ▄███      
+;   ▄██▀▄▀  ██▀       
+;  ▀████▄▄ ████▄▄     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 6, 6, 7, 7, 5, 6, 7, 0, 7, 7, 7, 7, 0, 0, 6, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 5, 6, 7, 7, 0, 5, 7, 7, 7, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 5, 7, 7, 6, 5, 6, 0, 0, 7, 7, 6, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 6, 7, 7, 7, 7, 5, 5, 0, 7, 7, 7, 7, 5, 5, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_65:
+;      ▀██▄▀ ███▀     
+;    ▄▄█ █▀ ███▀      
+;  ▄███▄▀  ▄██▄       
+;   ▀▀████▄▀▀████▄▄   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 6, 7, 7, 5, 6, 0, 7, 7, 7, 6, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 5, 5, 7, 0, 7, 6, 0, 7, 7, 7, 6, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 5, 7, 7, 7, 5, 6, 0, 0, 5, 7, 7, 5, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 6, 6, 7, 7, 7, 7, 5, 6, 6, 7, 7, 7, 7, 5, 5, 0, 0, 0
+  .byte end_char
+lore_screen_66:
+;      ▄▀██ ▄███      
+;   ▄██▀▄▀  ██▀       
+;  ▀████▄▄ ████▄▄     
+;     ▀▀███  ▀▀████   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 5, 6, 7, 7, 0, 5, 7, 7, 7, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 5, 7, 7, 6, 5, 6, 0, 0, 7, 7, 6, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 6, 7, 7, 7, 7, 5, 5, 0, 7, 7, 7, 7, 5, 5, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 6, 6, 7, 7, 7, 0, 0, 6, 6, 7, 7, 7, 7, 0, 0, 0
+  .byte end_char
+lore_screen_67:
+;    ▄▄█ █▀ ███▀      
+;  ▄███▄▀  ▄██▄       
+;   ▀▀████▄▀▀████▄▄   
+;       ▀▀█    ▀▀▀█   
+  .byte pos_lcd_initial_line0, 0, 0, 0, 5, 5, 7, 0, 7, 6, 0, 7, 7, 7, 6, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 5, 7, 7, 7, 5, 6, 0, 0, 5, 7, 7, 5, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 6, 6, 7, 7, 7, 7, 5, 6, 6, 7, 7, 7, 7, 5, 5, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 6, 6, 7, 0, 0, 0, 0, 6, 6, 6, 7, 0, 0, 0
+  .byte end_char
+lore_screen_68:
+;   ▄██▀▄▀  ██▀       
+;  ▀████▄▄ ████▄▄     
+;     ▀▀███  ▀▀████   
+;         ▀       ▀   
+  .byte pos_lcd_initial_line0, 0, 0, 5, 7, 7, 6, 5, 6, 0, 0, 7, 7, 6, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 6, 7, 7, 7, 7, 5, 5, 0, 7, 7, 7, 7, 5, 5, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 6, 6, 7, 7, 7, 0, 0, 6, 6, 7, 7, 7, 7, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0
+  .byte end_char
+lore_screen_69:
+;  ▄███▄▀  ▄██▄       
+;   ▀▀████▄▀▀████▄▄   
+;       ▀▀█    ▀▀▀█   
+;                     
+  .byte pos_lcd_initial_line0, 0, 5, 7, 7, 7, 5, 6, 0, 0, 5, 7, 7, 5, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 6, 6, 7, 7, 7, 7, 5, 6, 6, 7, 7, 7, 7, 5, 5, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 6, 6, 7, 0, 0, 0, 0, 6, 6, 6, 7, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_70:
+;  ▀████▄▄ ████▄▄     
+;     ▀▀███  ▀▀████   
+;         ▀       ▀   
+;                     
+  .byte pos_lcd_initial_line0, 0, 6, 7, 7, 7, 7, 5, 5, 0, 7, 7, 7, 7, 5, 5, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 6, 6, 7, 7, 7, 0, 0, 6, 6, 7, 7, 7, 7, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_71:
+;   ▀▀████▄▀▀████▄▄   
+;       ▀▀█    ▀▀▀█   
+;                     
+;                     
+  .byte pos_lcd_initial_line0, 0, 0, 6, 6, 7, 7, 7, 7, 5, 6, 6, 7, 7, 7, 7, 5, 5, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 6, 6, 7, 0, 0, 0, 0, 6, 6, 6, 7, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_72:
+;     ▀▀███  ▀▀████   
+;         ▀       ▀   
+;                     
+;                     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 6, 6, 7, 7, 7, 0, 0, 6, 6, 7, 7, 7, 7, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_73:
+;       ▀▀█    ▀▀▀█   
+;                     
+;                     
+;                     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 6, 6, 7, 0, 0, 0, 0, 6, 6, 6, 7, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_74:
+;         ▀       ▀   
+;                     
+;                     
+;                     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+lore_screen_75:
+;                     
+;                     
+;                     
+;                     
+  .byte pos_lcd_initial_line0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte pos_lcd_initial_line3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  .byte end_char
+
+
 ;usar el primer byte como la posición de la linea
 auto1:
   .byte $00,$1F,$00,$11,$0E,$11,$00,$00
