@@ -118,9 +118,7 @@ RESET:
   jsr initilize_display
 
 start_demo:  
-  jsr demo_ms_p4;
-  ;jsr scroll_start_ms;
-  jsr scroller_start;
+
   jsr demo_ms_p1;
   jsr pacman_start_ms;
   jsr pacman_playing_ms;
@@ -131,6 +129,8 @@ start_demo:
   jsr demo_ms_p3
   jsr invaders_start_ms
   jsr invaders_playing_ms
+  jsr demo_ms_p4;
+  jsr scroller_start;
   jsr demo_ms_final
   jmp start_demo
 
