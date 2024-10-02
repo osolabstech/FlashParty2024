@@ -450,12 +450,12 @@ print_scroll_loop_l0:
   iny
   lda (pscroll_l0_low),y
   jsr print_char 
-  cpy #$14 ;20 decimal characters printed on the line
+  cpy #$13 ;20 decimal characters printed on the line
   bne print_scroll_loop_l0
   rts
 
 print_scroll_l1:
-  lda #pos_lcd_initial_line0
+  lda #pos_lcd_initial_line1
   jsr lcd_send_instruction 
   ldy #$FF
 print_scroll_loop_l1:
@@ -463,7 +463,7 @@ print_scroll_loop_l1:
   iny
   lda (pscroll_l1_low),y
   jsr print_char 
-  cpy #$13 ;19 20 decimal characters printed on the line from 0 to 19
+  cpy #$14 ;19 20 decimal characters printed on the line from 0 to 19
   bne print_scroll_loop_l1
   rts
 
@@ -481,7 +481,7 @@ print_scroll_loop_l2:
   rts
 
 print_scroll_l3:
-  lda #pos_lcd_initial_line0
+  lda #pos_lcd_initial_line3
   jsr lcd_send_instruction 
   ldy #$FF
 print_scroll_loop_l3:
