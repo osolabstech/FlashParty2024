@@ -433,7 +433,8 @@ print_scroll_l0:
   ldy #$FF
 print_scroll_loop_l0:
   ;print line zero 20 chars
-  inx
+  inx ;keep only here to count only 20 columns and not one column per line
+      ;as it would be if I keep it on l1, l2 and l3
   iny
   lda (pscroll_l0_low),y
   jsr print_char 
@@ -447,11 +448,10 @@ print_scroll_l1:
   ldy #$FF
 print_scroll_loop_l1:
   ;print line zero 20 chars
-  inx
   iny
   lda (pscroll_l1_low),y
   jsr print_char 
-  cpy #$14 ;20 decimal characters printed on the line
+  cpy #$13 ;19 20 decimal characters printed on the line from 0 to 19
   bne print_scroll_loop_l1
   rts
 
@@ -461,11 +461,10 @@ print_scroll_l2:
   ldy #$FF
 print_scroll_loop_l2:
   ;print line zero 20 chars
-  inx
   iny
   lda (pscroll_l2_low),y
   jsr print_char 
-  cpy #$14 ;20 decimal characters printed on the line
+  cpy #$13 ;19 20 decimal characters printed on the line from 0 to 19
   bne print_scroll_loop_l2
   rts
 
@@ -475,11 +474,10 @@ print_scroll_l3:
   ldy #$FF
 print_scroll_loop_l3:
   ;print line zero 20 chars
-  inx
   iny
   lda (pscroll_l3_low),y
   jsr print_char 
-  cpy #$14 ;20 decimal characters printed on the line
+  cpy #$13 ;19 20 decimal characters printed on the line from 0 to 19
   bne print_scroll_loop_l3
   rts
 
