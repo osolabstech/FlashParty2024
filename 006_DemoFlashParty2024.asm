@@ -118,7 +118,7 @@ RESET:
 
 start_demo:  
   jsr demo_ms_p4;
-  jsr print_scroll;
+  jsr scroller_start;
   jsr demo_ms_p1;
   jsr pacman_start_ms;
   jsr pacman_playing_ms;
@@ -393,7 +393,10 @@ done_l2:
 done_l3: 
   rts
 
-print_scroll:
+scroller_start:
+  jsr add_custom_chars_end_scroll
+  jsr initilize_display
+  jsr clear_display
   lda #$23 ;max columns scroll
   sta max_columns_scroll
   ldx #$FF ; to start al column 0
@@ -413,6 +416,8 @@ print_scroll:
   sta pscroll_l3_low
   lda #>scroll_linea_3
   sta pscroll_l3_high
+  jsr print_scroll_screen_loop
+  rts
 
 print_scroll_screen_loop:
   jsr print_scroll_l0
