@@ -409,7 +409,7 @@ scroller_start:
   jsr add_custom_chars_scroll
   jsr initilize_display
   jsr clear_display
-  lda #$70 ;max columns scroll
+  lda #$A0 ;max columns scroll
   sta max_columns_scroll
   lda #$00
   sta columns_counter
