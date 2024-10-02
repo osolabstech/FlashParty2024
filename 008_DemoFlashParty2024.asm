@@ -450,7 +450,7 @@ print_scroll_loop_l0:
   iny
   lda (pscroll_l0_low),y
   jsr print_char 
-  cpy #$13 ;20 decimal characters printed on the line
+  cpy #$14 ;20 decimal characters printed on the line
   bne print_scroll_loop_l0
   rts
 
@@ -476,7 +476,7 @@ print_scroll_loop_l2:
   iny
   lda (pscroll_l2_low),y
   jsr print_char 
-  cpy #$13 ;19 20 decimal characters printed on the line from 0 to 19
+  cpy #$14 ;19 20 decimal characters printed on the line from 0 to 19
   bne print_scroll_loop_l2
   rts
 
@@ -493,7 +493,7 @@ print_scroll_loop_l3:
   jsr print_char 
   cpx max_columns_scroll ;end all when we are at the last column of line 3
   beq print_scroll_end
-  cpy #$13 ;19 20 decimal characters printed on the line from 0 to 19
+  cpy #$14 ;19 20 decimal characters printed on the line from 0 to 19
   bne print_scroll_loop_l3
   rts
 
