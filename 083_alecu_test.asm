@@ -156,6 +156,18 @@ invaders_playing_ms:
   jsr multi_screen_print
   rts
 
+scroller_start_ms:
+  jsr add_custom_chars_scroller
+  jsr initilize_display
+  jsr clear_display
+  lda #<title_pacman
+  sta charDataVectorLow
+  lda #>title_pacman
+  sta charDataVectorHigh
+  jsr print_message
+  jsr DELAY_HALF_SEC
+  rts
+
 pacman_start_ms:
   jsr add_custom_chars_pacman
   jsr initilize_display
@@ -707,6 +719,13 @@ DELAY_HALF_SEC:
   sta delay_COUNT_B
   jmp DELAY_MAIN
 
+DELAY_TENTH_SEC:
+  lda #$08
+  sta delay_COUNT_A
+  lda #$FF
+  sta delay_COUNT_B
+  jmp DELAY_MAIN
+
 DELAY_MAIN:
     LDX delay_COUNT_A     ; Load outer loop count
 OUTER_LOOP:
@@ -936,6 +955,101 @@ char_7:
   jsr char_load
 
 add_custom_chars_end_sprint:  
+  rts
+
+add_custom_chars_scroller:
+  ;BEGIN Add custom char instruction
+  ;8026 lda
+
+char_0_scroller:
+  lda #($40+$00);+#position_custom_char ;the instruction itself is 0001, write a custom character cgram
+  ;or set cg ram address charter positions are 00,08,10,18,20,28,30,38
+  ;8028 jumps to send intrsuction
+  jsr lcd_send_instruction
+  lda #<scroll_char_0
+  sta charLoadLow
+  lda #>scroll_char_0
+  sta charLoadHigh
+  jsr char_load
+
+char_1_scroller:
+  lda #($40+$08);+#position_custom_char ;the instruction itself is 0001, write a custom character cgram
+  ;or set cg ram address charter positions are 00,08,10,18,20,28,30,38
+  ;8028 jumps to send intrsuction
+  jsr lcd_send_instruction
+  lda #<scroll_char_1
+  sta charLoadLow
+  lda #>scroll_char_1
+  sta charLoadHigh
+  jsr char_load
+
+char_2_scroller:
+  lda #($40+$10);+#position_custom_char ;the instruction itself is 0001, write a custom character cgram
+  ;or set cg ram address charter positions are 00,08,10,18,20,28,30,38
+  ;8028 jumps to send intrsuction
+  jsr lcd_send_instruction
+  lda #<scroll_char_2
+  sta charLoadLow
+  lda #>scroll_char_2
+  sta charLoadHigh
+  jsr char_load
+
+char_3_scroller:
+  lda #($40+$18);+#position_custom_char ;the instruction itself is 0001, write a custom character cgram
+  ;or set cg ram address charter positions are 00,08,10,18,20,28,30,38
+  ;8028 jumps to send intrsuction
+  jsr lcd_send_instruction
+  lda #<scroll_char_3
+  sta charLoadLow
+  lda #>scroll_char_3
+  sta charLoadHigh
+  jsr char_load
+
+char_4_scroller:
+  lda #($40+$20);+#position_custom_char ;the instruction itself is 0001, write a custom character cgram
+  ;or set cg ram address charter positions are 00,08,10,18,20,28,30,38
+  ;8028 jumps to send intrsuction
+  jsr lcd_send_instruction
+  lda #<scroll_char_4
+  sta charLoadLow
+  lda #>scroll_char_4
+  sta charLoadHigh
+  jsr char_load
+
+char_5_scroller:
+  lda #($40+$28);+#position_custom_char ;the instruction itself is 0001, write a custom character cgram
+  ;or set cg ram address charter positions are 00,08,10,18,20,28,30,38
+  ;8028 jumps to send intrsuction
+  jsr lcd_send_instruction
+  lda #<scroll_char_5
+  sta charLoadLow
+  lda #>scroll_char_5
+  sta charLoadHigh
+  jsr char_load
+
+char_6_scroller:
+  lda #($40+$30);+#position_custom_char ;the instruction itself is 0001, write a custom character cgram
+  ;or set cg ram address charter positions are 00,08,10,18,20,28,30,38
+  ;8028 jumps to send intrsuction
+  jsr lcd_send_instruction
+  lda #<scroll_char_6
+  sta charLoadLow
+  lda #>scroll_char_6
+  sta charLoadHigh
+  jsr char_load
+
+char_7_scroller:
+  lda #($40+$38);+#position_custom_char ;the instruction itself is 0001, write a custom character cgram
+  ;or set cg ram address charter positions are 00,08,10,18,20,28,30,38
+  ;8028 jumps to send intrsuction
+  jsr lcd_send_instruction
+  lda #<scroll_char_7
+  sta charLoadLow
+  lda #>scroll_char_7
+  sta charLoadHigh
+  jsr char_load
+
+add_custom_chars_end_scroller:
   rts
 
 
