@@ -409,7 +409,7 @@ scroller_start:
   jsr add_custom_chars_scroll
   jsr initilize_display
   jsr clear_display
-  lda #$ff ;max columns scroll
+  lda #$70 ;max columns scroll
   sta max_columns_scroll
   lda #$00
   sta columns_counter
@@ -437,6 +437,8 @@ print_scroll_screen_loop:
   jsr print_scroll_l1
   jsr print_scroll_l2
   jsr print_scroll_l3
+  inc columns_counter;keep only here to count only 20 columns per screen and not one column per line
+      ;as it would be if I keep it on l1, l2 and l0
   lda columns_counter
   cmp max_columns_scroll ;end all when we are at the last column of line 3
   beq print_scroll_end
@@ -489,14 +491,10 @@ print_scroll_l3:
   ldy #$FF
 print_scroll_loop_l3:
   ;print line zero 20 chars
-  inc columns_counter ;keep only here to count only 20 columns per screen and not one column per line
-      ;as it would be if I keep it on l1, l2 and l0
+
   iny
   lda (pscroll_l3_low),y
   jsr print_char 
-  lda columns_counter
-  cmp max_columns_scroll ;end all when we are at the last column of line 3
-  beq print_scroll_end
   cpy #$13 ;19 20 decimal characters printed on the line from 0 to 19
   bne print_scroll_loop_l3
   rts
